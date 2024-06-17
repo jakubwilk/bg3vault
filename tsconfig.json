@@ -19,6 +19,8 @@
       }
     ],
     "paths": {
+      "services/*": ["./src/services/*"],
+      "assets/*": ["./src/assets/*"],
       "features/common/*": ["./src/features/common/*"]
     }
   },
