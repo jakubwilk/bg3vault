@@ -21,6 +21,7 @@
     "paths": {
       "services/*": ["./src/services/*"],
       "assets/*": ["./src/assets/*"],
+      "db/*": ["./src/db/*"],
       "features/common/*": ["./src/features/common/*"]
     }
   },
