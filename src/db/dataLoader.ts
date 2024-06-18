@@ -5,7 +5,7 @@ const dataLoader = async (scope: keyof typeof ApiDbScopeEnum) => {
     throw new Error(`Cannot get data without correct scope. Provided scope: ${scope}`)
   }
 
-  const response = await fetch(`./../../public/data/${scope}.json`, {
+  const response = await fetch(`public/data/${scope}.json`, {
     method: 'GET',
     credentials: 'omit',
   })
