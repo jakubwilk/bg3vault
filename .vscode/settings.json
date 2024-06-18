@@ -1,22 +1,24 @@
 {
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true,
-      "**/obj": true,
-      "**/bin": true
-    },
-  
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "source.fixAll.eslint": "always",
-      "source.fixAll.stylelint": "always"
-    },
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file",
-    "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/obj": true,
+    "**/bin": true
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
-  
+}
