@@ -1,17 +1,19 @@
 import { ApiDbScopeEnum } from 'features/common/models'
-import { readFile } from 'fs/promises'
-import path from 'path'
 
-const dataLoader = async (scope: keyof ApiDbScopeEnum) => {
+const dataLoader = async (scope: keyof typeof ApiDbScopeEnum) => {
   if (!scope) {
     throw new Error(`Cannot get data without correct scope. Provided scope: ${scope}`)
   }
 
-  const data = (
-    await readFile(path.resolve(process.cwd(), `./../../public/data/${scope}.json`))
-  ).toString()
+  const response = await fetch(`http://localhost:3000/data/${scope}.json`, {
+    method: 'GET',
+    credentials: 'omit',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
 
-  return JSON.parse(data)
+  return response.json()
 }
 
 export default dataLoader
