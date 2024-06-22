@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { Button, Tooltip } from '@mantine/core'
 import logoUrl from 'assets/bg3logo.png'
 import clsx from 'clsx'
-import { HEADER_MENU } from 'features/common/utils'
+import { HEADER_MENU } from 'common/utils'
 import { isEqual } from 'lodash'
 
 import Maintenance from './Maintenance'

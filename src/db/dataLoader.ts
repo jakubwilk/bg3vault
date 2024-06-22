@@ -1,11 +1,18 @@
-import { ApiDbScopeEnum } from 'features/common/models'
+import { ApiDbScopeEnum, ApiLangEnum } from 'common/models'
 
-const dataLoader = async (scope: keyof typeof ApiDbScopeEnum) => {
+const dataLoader = async (
+  scope: keyof typeof ApiDbScopeEnum,
+  lang: keyof typeof ApiLangEnum = 'en',
+) => {
   if (!scope) {
     throw new Error(`Cannot get data without correct scope. Provided scope: ${scope}`)
   }
 
-  const response = await fetch(`http://localhost:3000/data/${scope}.json`, {
+  if (!lang) {
+    throw new Error(`Cannot get data without correct lang. Provided lang: ${lang}`)
+  }
+
+  const response = await fetch(`http://localhost:3000/data/${lang}/${scope}.json`, {
     method: 'GET',
     credentials: 'omit',
     headers: {
