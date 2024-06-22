@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Dragonborn"
+  },
+  {
+    "id": 2,
+    "name": "Drow"
+  },
+  {
+    "id": 3,
+    "name": "Dwarf"
+  },
+  {
+    "id": 4,
+    "name": "Elf"
+  },
+  {
+    "id": 5,
+    "name": "Githyanki"
+  },
+  {
+    "id": 6,
+    "name": "Gnome"
+  },
+  {
+    "id": 7,
+    "name": "Half-Elf"
+  },
+  {
+    "id": 8,
+    "name": "Half-Orc"
+  },
+  {
+    "id": 9,
+    "name": "Halfling"
+  },
+  {
+    "id": 10,
+    "name": "Human"
+  },
+  {
+    "id": 11,
+    "name": "Tiefling"
+  }
+]
