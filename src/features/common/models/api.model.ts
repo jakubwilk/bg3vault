@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-vars */
 export enum ApiDbScopeEnum {
-  // eslint-disable-next-line no-unused-vars
   races = 'races',
+}
+
+export enum ApiLangEnum {
+  en = 'en',
 }
