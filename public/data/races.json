@@ -1,0 +1,49 @@
+[
+  {
+    "id": "dc2289fa-cade-4d7f-b39e-3c6cdfec0cc1",
+    "name": "Dragonborn"
+  },
+  {
+    "id": "ff47cabe-caac-4732-bf12-0af404e07f49",
+    "name": "Drow"
+  },
+  {
+    "id": "5d44af53-52c8-4376-9e32-38e81e1018f5",
+    "name": "Dwarf"
+  },
+  {
+    "id": "536ccef4-d75a-4b84-ada3-fb58429a1ef6",
+    "name": "Elf"
+  },
+  {
+    "id": "2a5d4dc6-1912-4465-8dfe-62efd143939c",
+    "name": "Githyanki",
+    "subraces": null
+  },
+  {
+    "id": "2452e232-255b-43d0-9cef-2a8d2ba812ff",
+    "name": "Gnome"
+  },
+  {
+    "id": "7827dbd2-260d-404e-b965-0f56a0b3eb43",
+    "name": "Half-Elf"
+  },
+  {
+    "id": "a6c6a1be-df02-4bc8-b825-0074336ae671",
+    "name": "Half-Orc",
+    "subraces": null
+  },
+  {
+    "id": "2a6ff5d9-7629-4027-8a2d-a867cc3c19ec",
+    "name": "Halfling"
+  },
+  {
+    "id": "f51e8287-bd20-4c23-9841-4abab6214e67",
+    "name": "Human",
+    "subraces": null
+  },
+  {
+    "id": "ad3ea20d-4626-4b47-9c95-0485473e1348",
+    "name": "Tiefling"
+  }
+]
