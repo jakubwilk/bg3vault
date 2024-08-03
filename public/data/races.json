@@ -2,89 +2,266 @@
   {
     "id": "dc2289fa-cade-4d7f-b39e-3c6cdfec0cc1",
     "name": "Dragonborn",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "ff47cabe-caac-4732-bf12-0af404e07f49",
     "name": "Drow",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "5d44af53-52c8-4376-9e32-38e81e1018f5",
     "name": "Dwarf",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "536ccef4-d75a-4b84-ada3-fb58429a1ef6",
     "name": "Elf",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "2a5d4dc6-1912-4465-8dfe-62efd143939c",
     "name": "Githyanki",
-    "variants": [{
-      "id": "3c674c67-1784-4e5c-bf46-5066aa904396",
-      "name": "Githyanki"
-    }]
+    "variants": [
+      {
+        "id": "3c674c67-1784-4e5c-bf46-5066aa904396",
+        "name": "Githyanki"
+      }
+    ]
   },
   {
     "id": "2452e232-255b-43d0-9cef-2a8d2ba812ff",
     "name": "Gnome",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "7827dbd2-260d-404e-b965-0f56a0b3eb43",
     "name": "Half-Elf",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "a6c6a1be-df02-4bc8-b825-0074336ae671",
     "name": "Half-Orc",
-    "variants": [{
-      "id": "80d392b0-40a8-40d2-b6d2-ee330f204393",
-      "name": "Half-Orc"
-    }]
+    "image": null,
+    "link": "https://bg3.wiki/wiki/Half-Orc",
+    "variants": [
+      {
+        "id": "24030c03-7c7d-4337-bcbf-15af73a4b331",
+        "name": "Half-Orc",
+        "image": null,
+        "link": "https://bg3.wiki/wiki/Half-Orc",
+        "speed": {
+          "key": "Standard",
+          "value": "9 m / 30 ft"
+        },
+        "proficiencies": null,
+        "features": null
+      }
+    ],
+    "proficiencies": [
+      {
+        "id": "08fd9678-ce63-4c32-bb59-ed39ca8923f6",
+        "type": "Skills",
+        "data": [
+          {
+            "id": "7ef208b4-6e65-4440-8da4-8f017d220c43",
+            "name": "Intimidation",
+            "image": "https://bg3.wiki/w/images/thumb/e/e2/Intimidation_Icon.png/25px-Intimidation_Icon.png",
+            "link": "https://bg3.wiki/wiki/Intimidation"
+          }
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "f44b3480-7595-4ef6-ac76-ccc95b9437cf",
+        "name": "Can see in the dark up to 12 m / 40 ft",
+        "image": null,
+        "link": "https://bg3.wiki/wiki/Darkvision"
+      },
+      {
+        "id": "f3ad8b21-d904-49d6-8f10-9045398f4be4",
+        "name": "Add one additional dice of damage when scoring a critical hit with a melee weapon",
+        "image": null,
+        "link": "https://bg3.wiki/wiki/Savage_Attacks"
+      },
+      {
+        "id": "113d5628-4d69-4e80-ad52-4cdaab8127ed",
+        "name": "Drop to 1 hit point instead of being downed, once per long rest",
+        "image": null,
+        "link": "https://bg3.wiki/wiki/Relentless_Endurance"
+      }
+    ],
+    "icons": [
+      {
+        "id": "947f7604-5a1f-4e02-9323-24a1b6eb3771",
+        "image": "https://bg3.wiki/w/images/thumb/0/0d/Darkvision_Icon.webp/25px-Darkvision_Icon.webp.png",
+        "name": "Darkvision"
+      },
+      {
+        "id": "30ab8b6f-cca9-49d0-a8ed-460d5a1bb378",
+        "image": "https://bg3.wiki/w/images/thumb/8/84/Savage_Attacks_Icon.webp/25px-Savage_Attacks_Icon.webp.png",
+        "name": "Savage Attacks"
+      },
+      {
+        "id": "61b30fc3-e158-42eb-b724-dbebb1f8931f",
+        "image": "https://bg3.wiki/w/images/thumb/3/3a/Relentless_Endurance_Icon.webp/25px-Relentless_Endurance_Icon.webp.png",
+        "name": "Relentless Endurance"
+      }
+    ]
   },
   {
     "id": "2a6ff5d9-7629-4027-8a2d-a867cc3c19ec",
     "name": "Halfling",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   },
   {
     "id": "f51e8287-bd20-4c23-9841-4abab6214e67",
     "name": "Human",
-    "variants": [{
-      "id": "218f0778-219c-43eb-aeec-860fa9e8493b",
-      "name": "Human"
-    }]
+    "image": null,
+    "link": "https://bg3.wiki/wiki/Human",
+    "variants": [
+      {
+        "id": "218f0778-219c-43eb-aeec-860fa9e8493b",
+        "name": "Human",
+        "image": null,
+        "link": "https://bg3.wiki/wiki/Human",
+        "speed": {
+          "key": "Standard",
+          "value": "9 m / 30 ft"
+        },
+        "proficiencies": null,
+        "features": null
+      }
+    ],
+    "proficiencies": [
+      {
+        "id": "80d392b0-40a8-40d2-b6d2-ee330f204393",
+        "type": "Weapons",
+        "items": [
+          {
+            "id": "cd9ddd76-c677-4557-afbc-06492f019b49",
+            "name": "Spears",
+            "image": "https://bg3.wiki/w/images/thumb/a/a1/Spears_Icon.png/25px-Spears_Icon.png",
+            "link": "https://bg3.wiki/wiki/Spears"
+          },
+          {
+            "id": "a425575e-0161-41eb-8a58-da84f4921ce2",
+            "name": "Pikes",
+            "image": "https://bg3.wiki/w/images/thumb/7/72/Pikes_Icon.png/25px-Pikes_Icon.png",
+            "link": "https://bg3.wiki/wiki/Pikes"
+          },
+          {
+            "id": "4471ebcb-8db4-433d-9a82-8edb5c3d811e",
+            "name": "Halberds",
+            "image": "https://bg3.wiki/w/images/thumb/b/b5/Halberds_Icon.png/25px-Halberds_Icon.png",
+            "link": "https://bg3.wiki/wiki/Halberds"
+          },
+          {
+            "id": "782cbdf9-6bf5-4abd-a788-42f510c3e637",
+            "name": "Glaives",
+            "image": "https://bg3.wiki/w/images/thumb/6/6a/Glaives_Icon.png/25px-Glaives_Icon.png",
+            "link": "https://bg3.wiki/wiki/Glaives"
+          }
+        ]
+      },
+      {
+        "id": "33912f93-2e93-4848-8f38-227d5789b98f",
+        "type": "Armour",
+        "data": [
+          {
+            "id": "87e00268-964d-4cc0-9224-413e195366bb",
+            "name": "Light armour",
+            "image": "https://bg3.wiki/w/images/thumb/1/17/Light_Armour_Icon.png/25px-Light_Armour_Icon.png",
+            "link": "https://bg3.wiki/wiki/Armour#List_of_light_armour"
+          },
+          {
+            "id": "6ed00ca6-6593-450f-8665-ffe253d57b6e",
+            "name": "Shields",
+            "image": "https://bg3.wiki/w/images/thumb/a/af/Shields_Icon.png/25px-Shields_Icon.png",
+            "link": "https://bg3.wiki/wiki/Shields"
+          }
+        ]
+      },
+      {
+        "id": "491e293b-2e12-46c0-89da-836a8e805c98",
+        "type": "Skills",
+        "data": [
+          {
+            "id": "d6f2307a-997a-4ce5-b5b1-2d9bd4eb4d03",
+            "name": "Skill",
+            "image": null,
+            "link": "https://bg3.wiki/wiki/Skill"
+          }
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "61ddf0b5-4b86-415e-84ff-8ba2f40d083d",
+        "name": "Increased carrying capacity by 25%",
+        "image": "https://bg3.wiki/w/images/thumb/e/ea/Weight_Icon.png/25px-Weight_Icon.png",
+        "link": "https://bg3.wiki/wiki/Carrying_Capacity"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": "c91dda9c-32eb-4ede-8e6f-23a58917789a",
+        "type": "CAPACITY",
+        "modifier": 1.25
+      }
+    ],
+    "icons": [
+      {
+        "id": "3e80e07f-e115-45ca-9793-bb2250883390",
+        "image": "https://bg3.wiki/w/images/thumb/b/bd/Generic_Tactical_Icon.webp/25px-Generic_Tactical_Icon.webp.png",
+        "name": "Human Versatility"
+      }
+    ]
   },
   {
     "id": "ad3ea20d-4626-4b47-9c95-0485473e1348",
     "name": "Tiefling",
-    "variants": [{
-      "id": "",
-      "name": ""
-    }]
+    "variants": [
+      {
+        "id": "",
+        "name": ""
+      }
+    ]
   }
 ]
