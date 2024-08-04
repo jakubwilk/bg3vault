@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Update human and half-orc race" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="config-races-api" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jakubwilk&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1722766927" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="config-races-api" />
+                    <option name="lastUsedInstant" value="1722766926" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jakubwilk/baldurs-gate-3-fan-web-api.git&quot;,
+    &quot;accountId&quot;: &quot;85eb18ed-87b7-4a39-b0b1-d7c1a2f43d8b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2jsx3FzvoToHL3tU0sG7di3I1xt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.general",
+    "ts.external.directory.path": "E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Dev_Repository\Web\baldurs-gate-3-fan-web-api\public\data" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="" />
+      <created>1722189385313</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722189385313</updated>
+      <workItem from="1722189387490" duration="2260000" />
+      <workItem from="1722233063031" duration="545000" />
+      <workItem from="1722497923858" duration="5705000" />
+      <workItem from="1722508887135" duration="139000" />
+      <workItem from="1722509061807" duration="572000" />
+      <workItem from="1722582469260" duration="4594000" />
+      <workItem from="1722679157595" duration="7049000" />
+      <workItem from="1722764144599" duration="1359000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add WebStorm files">
+      <option name="closed" value="true" />
+      <created>1722233584218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722233584218</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Replace number id with string uuid for races">
+      <option name="closed" value="true" />
+      <created>1722233598245</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722233598245</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add WS files">
+      <option name="closed" value="true" />
+      <created>1722508824561</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722508824561</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update races.json with subraces variants">
+      <option name="closed" value="true" />
+      <created>1722508845457</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722508845457</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add WS files">
+      <option name="closed" value="true" />
+      <created>1722689144675</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722689144675</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update human and half-orc race">
+      <option name="closed" value="true" />
+      <created>1722689158601</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722689158601</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add WebStorm files" />
+    <MESSAGE value="Replace number id with string uuid for races" />
+    <MESSAGE value="Update races.json with subraces variants" />
+    <MESSAGE value="Add WS files" />
+    <MESSAGE value="Update human and half-orc race" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update human and half-orc race" />
+  </component>
+</project>
