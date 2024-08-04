@@ -24,7 +24,8 @@
       "db/*": ["./src/db/*"],
       "auth/*": ["./src/modules/auth/*"],
       "common/*": ["./src/modules/common/*"],
-      "builds/*": ["./src/modules/builds/*"]
+      "builds/*": ["./src/modules/builds/*"],
+      "users/*": ["./src/modules/users/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
