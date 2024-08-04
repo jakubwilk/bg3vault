@@ -1,4 +1,4 @@
-import { ApiDbScopeEnum } from 'features/common/models'
+import { ApiDbScopeEnum } from 'features/common/modules'
 import { isNil } from 'lodash'
 
 import dataLoader from './dataLoader'

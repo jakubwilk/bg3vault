@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { IBM_Plex_Serif } from 'next/font/google'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
-import { Header } from 'common/components'
+import { Header } from 'common/layout'
 import { StoreProvider } from 'common/redux'
 
 import '@mantine/core/styles.css'

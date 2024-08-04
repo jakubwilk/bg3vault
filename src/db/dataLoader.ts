@@ -12,7 +12,7 @@ const dataLoader = async (
     throw new Error(`Cannot get data without correct lang. Provided lang: ${lang}`)
   }
 
-  const response = await fetch(`http://localhost:3000/data/${lang}/${scope}.json`, {
+  const response = await fetch(`http://localhost:3000/data/${scope}.json`, {
     method: 'GET',
     credentials: 'omit',
     headers: {
