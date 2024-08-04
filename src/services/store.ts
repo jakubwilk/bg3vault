@@ -1,12 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-
-const rootReducer = {
-  root: {} as any,
-}
+import { authSlice } from 'auth/store'
 
 export const store = () => {
   return configureStore({
-    reducer: rootReducer,
+    reducer: {
+      auth: authSlice.reducer,
+    },
   })
 }
 
