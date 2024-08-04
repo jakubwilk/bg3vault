@@ -22,7 +22,9 @@
       "services/*": ["./src/services/*"],
       "assets/*": ["./src/assets/*"],
       "db/*": ["./src/db/*"],
-      "common/*": ["./src/features/common/*"]
+      "auth/*": ["./src/modules/auth/*"],
+      "common/*": ["./src/modules/common/*"],
+      "builds/*": ["./src/modules/builds/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
