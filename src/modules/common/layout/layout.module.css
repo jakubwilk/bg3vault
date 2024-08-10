@@ -1,6 +1,15 @@
 .header {
-    background-image: url("/header.jpg");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('/header.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menuItem {
+  font-size: 1rem;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }
