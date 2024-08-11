@@ -1,0 +1,20 @@
+.createBuildButton {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover > svg,
+  &:focus > svg {
+    fill: #fde68a;
+  }
+
+  &:hover > div > p:first-of-type,
+  &:focus > div > p:first-of-type {
+    color: white;
+  }
+
+  &:hover > div > p:last-of-type,
+  &:focus > div > p:last-of-type {
+    color: #d4d4d4;
+  }
+}
