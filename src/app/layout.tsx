@@ -8,7 +8,10 @@ import { StoreProvider } from 'common/redux'
 import '@mantine/core/styles.css'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin-ext'], weight: ['300', '400', '500', '600'] })
+const inter = Inter({
+  subsets: ['latin-ext'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
