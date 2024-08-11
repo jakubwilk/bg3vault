@@ -15,7 +15,7 @@ export default function Menu() {
       <Link
         href={'/'}
         className={clsx(
-          'uppercase font-medium text-white transition-colors hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
+          'uppercase font-medium text-white hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
           classes.menuLink,
         )}
       >
@@ -24,7 +24,7 @@ export default function Menu() {
       <Link
         href={'/builds'}
         className={clsx(
-          'uppercase font-medium text-white transition-colors hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
+          'uppercase font-medium text-white hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
           classes.menuLink,
         )}
       >
@@ -33,7 +33,7 @@ export default function Menu() {
       <Link
         href={'/news'}
         className={clsx(
-          'uppercase font-medium text-white transition-colors hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
+          'uppercase font-medium text-white hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
           classes.menuLink,
         )}
       >

@@ -12,7 +12,7 @@ export default function GuestMenu() {
       <Link
         href={'/login'}
         className={clsx(
-          'uppercase font-medium text-white transition-colors hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
+          'uppercase font-medium text-white hover:text-amber-200 focus:text-white focus-visible:text-amber-200',
           classes.login,
         )}
       >
@@ -23,7 +23,7 @@ export default function GuestMenu() {
         component={Link}
         href={'/register'}
         className={clsx(
-          'uppercase font-medium h-auto px-6 py-4 bg-amber-200 text-black transition-colors hover:bg-white hover:text-black focus:bg-amber-200 focus:text-black focus-visible:bg-white',
+          'uppercase font-medium h-auto px-6 py-4 bg-amber-200 text-black hover:bg-white hover:text-black focus:bg-amber-200 focus:text-black focus-visible:bg-white',
           classes.register,
         )}
       >
