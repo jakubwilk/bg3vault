@@ -6,7 +6,7 @@ import { IconCircleArrowRightFilled } from '@tabler/icons-react'
 import clsx from 'clsx'
 import { useAppSelector } from 'services/config'
 
-import classes from './components.module.css'
+import classes from './components-home.module.css'
 
 export default function CreateBuildHomeButton() {
   const { user } = useAppSelector((state) => state.auth)
