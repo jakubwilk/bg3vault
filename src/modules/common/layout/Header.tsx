@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
+import { Text } from '@mantine/core'
 import { clsx } from 'clsx'
 import { useAppSelector } from 'services/config'
 
@@ -21,10 +22,21 @@ export default function Header() {
 
   return (
     <header className={clsx('h-full md:h-screen', headerClassName, classes.header)}>
-      <div className={'container mx-auto'}>
-        <div className={'w-full px-4 flex justify-between items-center gap-4'}>
-          <div>{'logo'}</div>
-          <Menu />
+      <div className={'container h-full max-h-[inherit] mx-auto'}>
+        <div className={'flex flex-col justify-between h-full max-h-[inherit] gap-6'}>
+          <div className={'w-full px-4 flex justify-between items-center gap-4'}>
+            <div>{'logo'}</div>
+            <Menu />
+          </div>
+          <div className={'px-4 pb-6'}>
+            {!hasTopRatedBuilds && (
+              <Text className={'uppercase font-bold text-6xl text-white'}>
+                {'Your library of '}
+                <span className={'text-amber-200'}>{'the best'}</span>
+                {' BG3 builds'}
+              </Text>
+            )}
+          </div>
         </div>
       </div>
     </header>
