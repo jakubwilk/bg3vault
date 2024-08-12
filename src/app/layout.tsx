@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
-import { Header } from 'common/layout'
+import { Footer, Header } from 'common/layout'
 import { StoreProvider } from 'common/redux'
 
 import '@mantine/core/styles.css'
@@ -33,6 +33,7 @@ export default function RootLayout({
           <MantineProvider>
             <Header />
             {children}
+            <Footer />
           </MantineProvider>
         </StoreProvider>
       </body>
