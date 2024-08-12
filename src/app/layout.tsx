@@ -31,9 +31,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <StoreProvider>
           <MantineProvider>
-            <Header />
-            {children}
-            <Footer />
+            <div className={'flex flex-col justify-between gap-6 min-h-screen'}>
+              <div>
+                <Header />
+                {children}
+              </div>
+              <Footer />
+            </div>
           </MantineProvider>
         </StoreProvider>
       </body>
