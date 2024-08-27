@@ -19,14 +19,10 @@
       }
     ],
     "paths": {
+      "base/*": ["./*"],
       "services/*": ["./src/services/*"],
-      "assets/*": ["./src/assets/*"],
-      "db/*": ["./src/db/*"],
       "auth/*": ["./src/modules/auth/*"],
-      "common/*": ["./src/modules/common/*"],
-      "builds/*": ["./src/modules/builds/*"],
-      "users/*": ["./src/modules/users/*"],
-      "news/*": ["./src/modules/news/*"]
+      "common/*": ["./src/modules/common/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
