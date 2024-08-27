@@ -1,0 +1,20 @@
+{
+  "AuthPage": {
+    "Login": {
+      "title": "BG3Vault | Login into app",
+      "description": "Log in to BG3Vault to manage your builds or add new ones and thus develop applications",
+      "Section": {
+        "title": "Registration",
+        "description": "Gain access to your account, publish your own character builds and create a community with others"
+      }
+    },
+    "Register": {
+      "title": "BG3Vault | Create new account",
+      "description": "Create a new account to become part of a community that makes each new character game unique",
+      "Section": {
+        "title": "Logging",
+        "description": ""
+      }
+    }
+  }
+}
