@@ -15,3 +15,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
+
+button:active,
+a:active {
+  transform: translateY(0) !important;
+}
