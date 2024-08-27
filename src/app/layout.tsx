@@ -35,7 +35,25 @@ export default async function RootLayout({
       <body className={barlow.className}>
         <NextIntlClientProvider messages={messages}>
           <StoreProvider>
-            <MantineProvider>
+            <MantineProvider
+              theme={{
+                primaryColor: 'larian',
+                colors: {
+                  larian: [
+                    '#FCF3CC',
+                    '#FCEFBD',
+                    '#FFEDAE',
+                    '#FFEA9D',
+                    '#FFE588',
+                    '#FFE177',
+                    '#FBDD76',
+                    '#F6D974',
+                    '#ECD070',
+                    '#D9BE69',
+                  ],
+                },
+              }}
+            >
               <div className={'flex flex-col justify-between gap-6 min-h-screen'}>{children}</div>
             </MantineProvider>
           </StoreProvider>
