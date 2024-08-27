@@ -4,6 +4,7 @@ import { Barlow } from 'next/font/google'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Button, Text, Title } from '@mantine/core'
+import { LoginForm } from 'auth/components'
 import clsx from 'clsx'
 
 import classes from './pages.module.css'
@@ -18,10 +19,10 @@ export default function LoginPage() {
 
   return (
     <>
-      <div>{'1'}</div>
+      <LoginForm />
       <section
         className={clsx(
-          'p-8 pr-16 flex flex-col gap-6 justify-start',
+          'p-8 pr-16 flex flex-col gap-6 justify-start items-start',
           classes.loginRegisterSection,
         )}
       >
@@ -37,7 +38,7 @@ export default function LoginPage() {
           href={'/register'}
           className={clsx('self-start rounded-none uppercase duration-75', classes.sectionButton)}
         >
-          {'Create account'}
+          {t('Login.Action.create')}
         </Button>
       </section>
     </>
