@@ -2,7 +2,6 @@ import { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
-import { Footer, Header } from 'common/layout'
 import { StoreProvider } from 'common/redux'
 
 import '@mantine/core/styles.css'
@@ -31,13 +30,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <StoreProvider>
           <MantineProvider>
-            <div className={'flex flex-col justify-between gap-6 min-h-screen'}>
-              <div>
-                <Header />
-                {children}
-              </div>
-              <Footer />
-            </div>
+            <div className={'flex flex-col justify-between gap-6 min-h-screen'}>{children}</div>
           </MantineProvider>
         </StoreProvider>
       </body>

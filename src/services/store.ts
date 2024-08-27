@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { authSlice } from 'auth/store'
-import { buildsSlice } from 'builds/store'
 
 export const store = () => {
   return configureStore({
     reducer: {
       auth: authSlice.reducer,
-      builds: buildsSlice.reducer,
     },
   })
 }
