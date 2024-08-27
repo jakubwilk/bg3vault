@@ -20,3 +20,8 @@ button:active,
 a:active {
   transform: translateY(0) !important;
 }
+
+*::selection {
+  color: var(--mantine-color-black);
+  background-color: var(--mantine-color-larian-5);
+}
