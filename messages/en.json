@@ -3,17 +3,31 @@
     "Login": {
       "title": "BG3Vault | Login into app",
       "description": "Log in to BG3Vault to manage your builds or add new ones and thus develop applications",
+      "Form": {
+        "title": "Logging"
+      },
       "Section": {
         "title": "Registration",
         "description": "Gain access to your account, publish your own character builds and create a community with others"
+      },
+      "Action": {
+        "back": "Back to homepage",
+        "create": "Create account"
       }
     },
     "Register": {
       "title": "BG3Vault | Create new account",
       "description": "Create a new account to become part of a community that makes each new character game unique",
+      "Form": {
+        "title": "Registration"
+      },
       "Section": {
         "title": "Logging",
         "description": ""
+      },
+      "Action": {
+        "back": "Back to homepage",
+        "create": "Sign in"
       }
     }
   }
