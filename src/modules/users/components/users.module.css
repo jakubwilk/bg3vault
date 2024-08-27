@@ -1,0 +1,21 @@
+.login {
+  font-size: 1rem;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.register {
+  font-size: 1rem;
+
+  &:active {
+    transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}

@@ -4,34 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Add WS files">
-      <change afterPath="$PROJECT_DIR$/public/header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/layout.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Reorganize project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/bg3logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/baseDriver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/baseDriver.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/dataLoader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/dataLoader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/components/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/components/layout/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/components/layout/Maintenance.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/components/layout/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/models/api.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/models/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/models/route.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/redux/StoreProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/redux/StoreProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/redux/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/redux/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/utils/api.utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/utils/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/common/utils/routes.utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/layout/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/layout/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/layout/layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/layout/layout.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,25 +85,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Dev_Repository\Web\baldurs-gate-3-fan-web-api\src\modules\common" />
@@ -155,7 +133,8 @@
       <workItem from="1722582469260" duration="4594000" />
       <workItem from="1722679157595" duration="7049000" />
       <workItem from="1722764144599" duration="1359000" />
-      <workItem from="1722766998550" duration="5414000" />
+      <workItem from="1722766998550" duration="6126000" />
+      <workItem from="1722788830918" duration="3825000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -213,7 +192,31 @@
       <option name="project" value="LOCAL" />
       <updated>1722767028268</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add WS files">
+      <option name="closed" value="true" />
+      <created>1722773834074</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773834074</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update packages and aliases">
+      <option name="closed" value="true" />
+      <created>1722774566967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722774566967</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Reorganize project">
+      <option name="closed" value="true" />
+      <created>1722774573354</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722774573354</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +239,8 @@
     <MESSAGE value="Update races.json with subraces variants" />
     <MESSAGE value="Update human and half-orc race" />
     <MESSAGE value="Add WS files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add WS files" />
+    <MESSAGE value="Update packages and aliases" />
+    <MESSAGE value="Reorganize project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganize project" />
   </component>
 </project>

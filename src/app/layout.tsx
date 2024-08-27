@@ -1,14 +1,17 @@
 import { ReactNode } from 'react'
 import type { Metadata } from 'next'
-import { IBM_Plex_Serif } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
-import { Header } from 'common/layout'
+import { Footer, Header } from 'common/layout'
 import { StoreProvider } from 'common/redux'
 
 import '@mantine/core/styles.css'
 import './globals.css'
 
-const ibmPlexSerif = IBM_Plex_Serif({ subsets: ['latin-ext'], weight: '400' })
+const inter = Inter({
+  subsets: ['latin-ext'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -25,11 +28,16 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={ibmPlexSerif.className}>
+      <body className={inter.className}>
         <StoreProvider>
           <MantineProvider>
-            <Header />
-            {children}
+            <div className={'flex flex-col justify-between gap-6 min-h-screen'}>
+              <div>
+                <Header />
+                {children}
+              </div>
+              <Footer />
+            </div>
           </MantineProvider>
         </StoreProvider>
       </body>

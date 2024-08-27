@@ -26,7 +26,7 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.5",
     "@reduxjs/toolkit": "^2.2.5",
-    "@tabler/icons-react": "^3.11.0",
+    "@tabler/icons-react": "^3.12.0",
     "@tiptap/extension-link": "^2.5.8",
     "@tiptap/react": "^2.5.8",
     "@tiptap/starter-kit": "^2.5.8",
