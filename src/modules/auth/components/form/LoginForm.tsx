@@ -6,7 +6,7 @@ import { Barlow } from 'next/font/google'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Anchor, Title } from '@mantine/core'
+import { Anchor, Button, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
 import clsx from 'clsx'
 import { object, string } from 'yup'
@@ -23,6 +23,7 @@ const barlow = Barlow({
 })
 
 export default function LoginForm() {
+  const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
 
   const form = useForm<ILoginFormValues>({
@@ -34,8 +35,8 @@ export default function LoginForm() {
     },
     resolver: yupResolver(
       object({
-        username: string().required(),
-        password: string().required(),
+        username: string().required(tc('Validation.required')),
+        password: string().required(tc('Validation.required')),
       }),
     ),
   })
@@ -55,8 +56,14 @@ export default function LoginForm() {
         {t('Login.Form.title')}
       </Title>
       <FormProvider {...formValues}>
-        <form onSubmit={form.handleSubmit(handleSubmit)}>
-          <LoginFormFields />
+        <form onSubmit={form.handleSubmit(handleSubmit)} noValidate>
+          <LoginFormFields control={form.control} />
+          <Button
+            type={'submit'}
+            className={clsx('rounded-none uppercase duration-75', classes.sectionButton)}
+          >
+            {t('Login.Action.login')}
+          </Button>
         </form>
       </FormProvider>
       <Anchor
