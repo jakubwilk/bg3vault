@@ -6,3 +6,8 @@ export enum AuthRoleEnum {
   // eslint-disable-next-line no-unused-vars
   ADMIN = 'ADMIN',
 }
+
+export interface ILoginFormValues {
+  username: string
+  password: string
+}

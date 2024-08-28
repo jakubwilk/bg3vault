@@ -1,11 +1,19 @@
 'use client'
 
+import { useMemo } from 'react'
+import { FormProvider, useForm } from 'react-hook-form'
 import { Barlow } from 'next/font/google'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { Title } from '@mantine/core'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { Anchor, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
 import clsx from 'clsx'
+import { object, string } from 'yup'
+
+import { ILoginFormValues } from '../../models'
+
+import LoginFormFields from './LoginFormFields'
 
 import classes from './form.module.css'
 
@@ -17,6 +25,27 @@ const barlow = Barlow({
 export default function LoginForm() {
   const t = useTranslations('AuthPage')
 
+  const form = useForm<ILoginFormValues>({
+    criteriaMode: 'all',
+    mode: 'onChange',
+    defaultValues: {
+      username: '',
+      password: '',
+    },
+    resolver: yupResolver(
+      object({
+        username: string().required(),
+        password: string().required(),
+      }),
+    ),
+  })
+
+  const formValues = useMemo(() => form, [form])
+
+  const handleSubmit = (values: ILoginFormValues) => {
+    console.log('values', values)
+  }
+
   return (
     <section className={'p-8 pl-16 flex flex-col gap-6 justify-start items-end'}>
       <Title
@@ -25,7 +54,13 @@ export default function LoginForm() {
       >
         {t('Login.Form.title')}
       </Title>
-      <Link
+      <FormProvider {...formValues}>
+        <form onSubmit={form.handleSubmit(handleSubmit)}>
+          <LoginFormFields />
+        </form>
+      </FormProvider>
+      <Anchor
+        component={Link}
         href={'/'}
         className={clsx(
           'flex items-center self-end rounded-none underline duration-75',
@@ -34,7 +69,7 @@ export default function LoginForm() {
       >
         <IconChevronLeft width={18} stroke={2} className={'mr-2'} />
         {t('Login.Action.back')}
-      </Link>
+      </Anchor>
     </section>
   )
 }
