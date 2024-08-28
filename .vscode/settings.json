@@ -26,5 +26,6 @@
   },
   "[postcss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "database-client.telemetry.usesOnlineServices": false
 }
