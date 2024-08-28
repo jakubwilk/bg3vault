@@ -19,7 +19,6 @@
       }
     ],
     "paths": {
-      "base/*": ["./*"],
       "services/*": ["./src/services/*"],
       "auth/*": ["./src/modules/auth/*"],
       "common/*": ["./src/modules/common/*"]

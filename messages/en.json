@@ -1,4 +1,9 @@
 {
+  "Common": {
+    "Validation": {
+      "required": "Field is required"
+    }
+  },
   "AuthPage": {
     "Login": {
       "title": "BG3Vault | Login into app",
@@ -12,7 +17,8 @@
       },
       "Action": {
         "back": "Back to homepage",
-        "create": "Create account"
+        "create": "Create account",
+        "login": "Login"
       }
     },
     "Register": {
@@ -27,7 +33,8 @@
       },
       "Action": {
         "back": "Back to homepage",
-        "create": "Sign in"
+        "create": "Sign in",
+        "register": "Register"
       }
     }
   }

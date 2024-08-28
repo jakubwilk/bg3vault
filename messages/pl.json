@@ -1,4 +1,9 @@
 {
+  "Common": {
+    "Validation": {
+      "required": "Pole jest wymagane"
+    }
+  },
   "AuthPage": {
     "Login": {
       "title": "BG3Vault | Logowanie do aplikacji",
@@ -12,7 +17,8 @@
       },
       "Action": {
         "back": "Powrót na stronę główną",
-        "create": "Utwórz konto"
+        "create": "Utwórz konto",
+        "login": "Zaloguj się"
       }
     },
     "Register": {
@@ -27,7 +33,8 @@
       },
       "Action": {
         "back": "Powrót na stronę główną",
-        "login": "Zaloguj się"
+        "login": "Zaloguj się",
+        "create": "Zarejestruj się"
       }
     }
   }
