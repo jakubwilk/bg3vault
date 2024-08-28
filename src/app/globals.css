@@ -25,3 +25,9 @@ a:active {
   color: var(--mantine-color-black);
   background-color: var(--mantine-color-larian-5);
 }
+
+a:focus,
+a:focus-visible,
+a:focus-within {
+  border-radius: 0;
+}

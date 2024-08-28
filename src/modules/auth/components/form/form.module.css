@@ -19,6 +19,13 @@
 }
 
 .backLink {
+  color: var(--mantine-color-dark-4);
+
+  &:focus-visible {
+    outline: 2px solid var(--mantine-color-dark-4);
+    outline-offset: calc(0.125rem * var(--mantine-scale));
+  }
+
   @mixin hover {
     color: var(--mantine-color-dark-1);
   }
