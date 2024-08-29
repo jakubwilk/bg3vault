@@ -6,7 +6,7 @@ import { Barlow } from 'next/font/google'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Anchor, Button, Title } from '@mantine/core'
+import { Anchor, Button, Text, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
 import clsx from 'clsx'
 import { object, string } from 'yup'
@@ -56,14 +56,32 @@ export default function LoginForm() {
         {t('Login.Form.title')}
       </Title>
       <FormProvider {...formValues}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} noValidate>
+        <form className={'w-full'} onSubmit={form.handleSubmit(handleSubmit)} noValidate>
           <LoginFormFields control={form.control} />
-          <Button
-            type={'submit'}
-            className={clsx('rounded-none uppercase duration-75', classes.sectionButton)}
-          >
-            {t('Login.Action.login')}
-          </Button>
+          <div className={'mt-6 flex flex-col items-center gap-4 md:flex-row md:justify-between'}>
+            <Button
+              type={'submit'}
+              className={clsx(
+                'rounded-none uppercase duration-75 w-full md:w-auto',
+                classes.sectionButton,
+              )}
+            >
+              {t('Login.Action.login')}
+            </Button>
+            <Text className={'flex flex-row gap-1 md:gap-0 md:flex-col'}>
+              {'Problem with logging in?'}
+              <Anchor
+                component={Link}
+                href={'/recover'}
+                className={clsx(
+                  'flex items-center self-end rounded-none underline duration-75',
+                  classes.recoverLink,
+                )}
+              >
+                {'Recover password'}
+              </Anchor>
+            </Text>
+          </div>
         </form>
       </FormProvider>
       <Anchor
