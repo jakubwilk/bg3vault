@@ -29,12 +29,12 @@
       },
       "Section": {
         "title": "Logging",
-        "description": ""
+        "description": "Revisit your account, create new or modify currently published builds and grow the Baldur's Gate 3 community with others"
       },
       "Action": {
         "back": "Back to homepage",
-        "create": "Sign in",
-        "register": "Register"
+        "login": "Sign in",
+        "create": "Register"
       }
     },
     "Field": {
