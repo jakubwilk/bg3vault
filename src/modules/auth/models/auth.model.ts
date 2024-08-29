@@ -11,3 +11,9 @@ export interface ILoginFormValues {
   username: string
   password: string
 }
+
+export interface IRegisterFormValues {
+  email: string
+  username: string
+  password: string
+}
