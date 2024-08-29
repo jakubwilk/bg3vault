@@ -36,7 +36,7 @@ export default function RegisterForm() {
     },
     resolver: yupResolver(
       object({
-        email: string().email().required(tc('Validation.required')),
+        email: string().email(tc('Validation.email')).required(tc('Validation.required')),
         username: string().required(tc('Validation.required')),
         password: string().required(tc('Validation.required')),
       }),

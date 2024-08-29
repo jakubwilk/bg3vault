@@ -1,7 +1,8 @@
 {
   "Common": {
     "Validation": {
-      "required": "Field is required"
+      "required": "Field is required",
+      "email": "Incorrect email address"
     }
   },
   "AuthPage": {
@@ -40,7 +41,9 @@
     "Field": {
       "username": "Username",
       "password": "Password",
-      "email": "Email address"
+      "passwordDescription": "The password should have a minimum of 12 characters, one number and one capital letter",
+      "email": "Email address",
+      "emailDescription": "Used only during password reset and to communicate with administration"
     }
   }
 }

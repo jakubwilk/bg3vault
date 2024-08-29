@@ -16,6 +16,7 @@ export default function RegisterFormFields({ control, isLoading }: IProps) {
       <TextInputField
         name={'email'}
         label={t('Field.email')}
+        description={t('Field.emailDescription')}
         isRequired
         isDisabled={isLoading}
         control={control}
@@ -30,6 +31,7 @@ export default function RegisterFormFields({ control, isLoading }: IProps) {
       <PasswordInputField
         name={'password'}
         label={t('Field.password')}
+        description={t('Field.passwordDescription')}
         isRequired
         isDisabled={isLoading}
         control={control}

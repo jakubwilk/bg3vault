@@ -1,7 +1,8 @@
 {
   "Common": {
     "Validation": {
-      "required": "Pole jest wymagane"
+      "required": "Pole jest wymagane",
+      "email": "Niepoprawny adres email"
     }
   },
   "AuthPage": {
@@ -40,7 +41,9 @@
     "Field": {
       "username": "Nazwa użytkownika",
       "password": "Hasło",
-      "email": "Adres email"
+      "passwordDescription": "Hasło powinno posiadać minimum 12 znaków, jedną cyfrę i jedną dużą literę",
+      "email": "Adres email",
+      "emailDescription": "Używany tylko podczas resetowania hasła oraz w celu komunikacji z administracją"
     }
   }
 }
