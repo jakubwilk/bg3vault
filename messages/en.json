@@ -36,6 +36,11 @@
         "create": "Sign in",
         "register": "Register"
       }
+    },
+    "Field": {
+      "username": "Username",
+      "password": "Password",
+      "email": "Email address"
     }
   }
 }

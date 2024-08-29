@@ -36,6 +36,11 @@
         "login": "Zaloguj się",
         "create": "Zarejestruj się"
       }
+    },
+    "Field": {
+      "username": "Nazwa użytkownika",
+      "password": "Hasło",
+      "email": "Adres email"
     }
   }
 }

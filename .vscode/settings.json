@@ -27,5 +27,7 @@
   "[postcss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "database-client.telemetry.usesOnlineServices": false
+  "database-client.telemetry.usesOnlineServices": false,
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }
