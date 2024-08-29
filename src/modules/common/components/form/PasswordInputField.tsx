@@ -1,6 +1,15 @@
 import { ChangeEvent, ComponentPropsWithoutRef } from 'react'
 import { Control, Controller } from 'react-hook-form'
+import { Barlow } from 'next/font/google'
 import { PasswordInput, PasswordInputProps } from '@mantine/core'
+import clsx from 'clsx'
+
+import classes from './form.module.css'
+
+const barlow = Barlow({
+  subsets: ['latin-ext'],
+  weight: ['400'],
+})
 
 type TMantinePasswordInputProps = Omit<
   ComponentPropsWithoutRef<'input'>,
@@ -37,6 +46,10 @@ export default function PasswordInputField({
         control={control}
         render={({ field: { value, onBlur, onChange }, fieldState: { error } }) => (
           <PasswordInput
+            classNames={{
+              label: 'uppercase tracking-wide text-sm',
+              input: clsx('px-2.5 py-0.5 h-[42px]', barlow.className, classes.passwordInput),
+            }}
             required={isRequired}
             withAsterisk={isRequired}
             disabled={isDisabled}
@@ -56,6 +69,10 @@ export default function PasswordInputField({
 
   return (
     <PasswordInput
+      classNames={{
+        label: 'uppercase tracking-wide text-sm',
+        input: clsx('px-2.5 py-0.5 h-[42px]', barlow.className, classes.passwordInput),
+      }}
       name={name}
       required={isRequired}
       withAsterisk={isRequired}
