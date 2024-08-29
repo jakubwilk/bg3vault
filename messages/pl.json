@@ -2,7 +2,8 @@
   "Common": {
     "Validation": {
       "required": "Pole jest wymagane",
-      "email": "Niepoprawny adres email"
+      "email": "Niepoprawny adres email",
+      "password": "Niepoprawne hasło"
     }
   },
   "AuthPage": {

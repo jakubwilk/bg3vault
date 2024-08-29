@@ -38,7 +38,17 @@ export default function RegisterForm() {
       object({
         email: string().email(tc('Validation.email')).required(tc('Validation.required')),
         username: string().required(tc('Validation.required')),
-        password: string().required(tc('Validation.required')),
+        password: string()
+          .test('isPasswordCorrect', tc('Validation.password'), (value) => {
+            const regex = /^(?=.*\d)(?=.*[A-Z]).{12,}$/
+
+            if (value) {
+              return regex.test(value)
+            }
+
+            return true
+          })
+          .required(tc('Validation.required')),
       }),
     ),
   })
