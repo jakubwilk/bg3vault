@@ -56,6 +56,9 @@ export default function RegisterForm() {
   const formValues = useMemo(() => form, [form])
 
   const handleSubmit = (values: IRegisterFormValues) => {
+    fetch('/api/auth', { method: 'POST', body: JSON.stringify(values) })
+      .then((res) => res.json())
+      .then((res) => console.log('res', res))
     console.log('values', values)
   }
 

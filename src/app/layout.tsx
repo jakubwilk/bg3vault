@@ -4,7 +4,7 @@ import { Barlow } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
-import { StoreProvider } from 'common/redux'
+import { ReactQueryProvider, StoreProvider } from 'providers'
 
 import '@mantine/core/styles.css'
 import './globals.css'
@@ -54,7 +54,9 @@ export default async function RootLayout({
                 },
               }}
             >
-              <div className={'flex flex-col justify-between gap-6 min-h-screen'}>{children}</div>
+              <ReactQueryProvider>
+                <div className={'flex flex-col justify-between gap-6 min-h-screen'}>{children}</div>
+              </ReactQueryProvider>
             </MantineProvider>
           </StoreProvider>
         </NextIntlClientProvider>
