@@ -9,14 +9,15 @@ export async function POST(request: NextRequest) {
     const user = await prisma.user.findUnique({ where: { email: body.email } })
 
     if (user) {
-      HttpException.throwBadRequest('User already exist')
+      HttpException.throwBadRequest('Common.Exception.CreateUserExist')
     }
 
     const hashPassword = await hashUserPassword(body.password)
-    await prisma.user.create({ data: { password: hashPassword, ...body } })
+    await prisma.user.create({ data: { password: hashPassword, expireTime: new Date(), ...body } })
 
-    return NextResponse.json(null, { status: HttpStatus.CREATE })
+    return NextResponse.json('Register.Success.UserCreated', { status: HttpStatus.CREATE })
   } catch (err) {
     console.log('err', err)
+    return NextResponse.json(err)
   }
 }

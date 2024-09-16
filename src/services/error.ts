@@ -1,3 +1,5 @@
+import { NextResponse } from 'next/server'
+
 export interface IHttpException {
   status: number
   message: string
@@ -17,24 +19,24 @@ export const HttpStatus = {
 export class HttpError {
   constructor() {}
 
-  throwBadRequest(message: string): IHttpException {
-    return { status: HttpStatus.BAD_REQUEST, message }
+  throwBadRequest(message: string): NextResponse {
+    return NextResponse.json(message, { status: HttpStatus.BAD_REQUEST })
   }
 
-  throwNotAutorization(message: string): IHttpException {
-    return { status: HttpStatus.NOT_AUTHORIZATION, message }
+  throwNotAutorization(message: string): NextResponse {
+    return NextResponse.json(message, { status: HttpStatus.NOT_AUTHORIZATION })
   }
 
-  throwForbidden(message: string): IHttpException {
-    return { status: HttpStatus.FORBIDDEN, message }
+  throwForbidden(message: string): NextResponse {
+    return NextResponse.json(message, { status: HttpStatus.FORBIDDEN })
   }
 
-  throwNotFound(message: string): IHttpException {
-    return { status: HttpStatus.NOT_FOUND, message }
+  throwNotFound(message: string): NextResponse {
+    return NextResponse.json(message, { status: HttpStatus.NOT_FOUND })
   }
 
-  throwServerError(message: string): IHttpException {
-    return { status: HttpStatus.SERVER_ERROR, message }
+  throwServerError(message: string): NextResponse {
+    return NextResponse.json(message, { status: HttpStatus.SERVER_ERROR })
   }
 }
 
