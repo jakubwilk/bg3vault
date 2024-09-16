@@ -1,5 +1,8 @@
 {
   "Common": {
+    "Exception": {
+      "CreateUserExist": "User with this email address or login already exist"
+    },
     "Validation": {
       "required": "Field is required",
       "email": "Incorrect email address",
@@ -37,6 +40,9 @@
         "back": "Back to homepage",
         "login": "Sign in",
         "create": "Register"
+      },
+      "Success": {
+        "UserCreated": "User was successfully created"
       }
     },
     "Field": {

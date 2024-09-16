@@ -1,5 +1,8 @@
 {
   "Common": {
+    "Exception": {
+      "CreateUserExist": "Użytkownik o podanym adresie email lub loginie jest już zarejestrowany"
+    },
     "Validation": {
       "required": "Pole jest wymagane",
       "email": "Niepoprawny adres email",
@@ -37,6 +40,9 @@
         "back": "Powrót na stronę główną",
         "login": "Zaloguj się",
         "create": "Zarejestruj się"
+      },
+      "Success": {
+        "UserCreated": "Użytkownik utworzony pomyślnie"
       }
     },
     "Field": {
