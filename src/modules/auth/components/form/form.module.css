@@ -12,6 +12,12 @@
   color: var(--mantine-color-dark-9);
   letter-spacing: 0.05rem;
 
+  &[disabled] {
+    cursor: not-allowed;
+    user-select: none;
+    pointer-events: none;
+  }
+
   @mixin hover {
     color: var(--mantine-color-dark-9);
     background-color: var(--mantine-color-larian-9);

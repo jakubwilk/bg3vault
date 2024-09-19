@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Anchor, Button, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
+import { useCreateAccountMutation } from 'auth/api'
 import clsx from 'clsx'
 import { useNotification } from 'common/hooks'
 import { object, string } from 'yup'
@@ -27,6 +28,7 @@ export default function RegisterForm() {
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
   const { showSuccessNotification } = useNotification()
+  const { mutate: createAccount, isPending } = useCreateAccountMutation()
 
   const form = useForm<IRegisterFormValues>({
     criteriaMode: 'all',
@@ -58,11 +60,16 @@ export default function RegisterForm() {
   const formValues = useMemo(() => form, [form])
 
   const handleSubmit = (values: IRegisterFormValues) => {
-    fetch('/api/auth/create', { method: 'POST', body: JSON.stringify(values) })
-      .then((res) => res.json())
-      .then(() => {
+    createAccount(values, {
+      onSuccess: () => {
         showSuccessNotification(t('Register.Success.UserCreated'))
-      })
+      },
+    })
+    // fetch('/api/auth/create', { method: 'POST', body: JSON.stringify(values) })
+    //   .then((res) => res.json())
+    //   .then(() => {
+    //     showSuccessNotification(t('Register.Success.UserCreated'))
+    //   })
   }
 
   return (
@@ -75,9 +82,10 @@ export default function RegisterForm() {
       </Title>
       <FormProvider {...formValues}>
         <form className={'w-full'} onSubmit={form.handleSubmit(handleSubmit)} noValidate>
-          <RegisterFormFields control={form.control} />
+          <RegisterFormFields control={form.control} isLoading={isPending} />
           <div className={'mt-6 flex flex-col items-center gap-4 md:flex-row md:justify-between'}>
             <Button
+              disabled={isPending}
               type={'submit'}
               className={clsx(
                 'rounded-none uppercase duration-75 w-full md:w-auto',
