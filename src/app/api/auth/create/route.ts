@@ -15,9 +15,10 @@ export async function POST(request: NextRequest) {
     const hashPassword = await hashUserPassword(body.password)
     await prisma.user.create({ data: { password: hashPassword, expireTime: new Date(), ...body } })
 
-    return NextResponse.json('Register.Success.UserCreated', { status: HttpStatus.CREATE })
+    return NextResponse.json(null, { status: HttpStatus.CREATE })
   } catch (err) {
-    console.log('err', err)
-    return NextResponse.json(err)
+    return NextResponse.json('Common.Exception.ServerCreateUserExist', {
+      status: HttpStatus.SERVER_ERROR,
+    })
   }
 }
