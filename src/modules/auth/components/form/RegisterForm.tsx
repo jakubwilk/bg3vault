@@ -9,6 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Anchor, Button, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
 import clsx from 'clsx'
+import { useNotification } from 'common/hooks'
 import { object, string } from 'yup'
 
 import { IRegisterFormValues } from '../../models'
@@ -25,6 +26,7 @@ const barlow = Barlow({
 export default function RegisterForm() {
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
+  const { showSuccessNotification } = useNotification()
 
   const form = useForm<IRegisterFormValues>({
     criteriaMode: 'all',
@@ -58,8 +60,9 @@ export default function RegisterForm() {
   const handleSubmit = (values: IRegisterFormValues) => {
     fetch('/api/auth/create', { method: 'POST', body: JSON.stringify(values) })
       .then((res) => res.json())
-      .then((res) => console.log('res', res))
-    console.log('values', values)
+      .then(() => {
+        showSuccessNotification(t('Register.Success.UserCreated'))
+      })
   }
 
   return (
