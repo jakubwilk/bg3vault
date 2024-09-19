@@ -42,7 +42,7 @@
         "create": "Zarejestruj się"
       },
       "Success": {
-        "UserCreated": "Użytkownik utworzony pomyślnie"
+        "UserCreated": "Użytkownik został utworzony pomyślnie"
       }
     },
     "Field": {
