@@ -33,7 +33,7 @@
     "@prisma/client": "^5.19.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@tabler/icons-react": "^3.17.0",
-    "@tanstack/react-query": "^5.53.1",
+    "@tanstack/react-query": "^5.56.2",
     "@tiptap/extension-link": "^2.7.1",
     "@tiptap/react": "^2.7.1",
     "@tiptap/starter-kit": "^2.7.1",
