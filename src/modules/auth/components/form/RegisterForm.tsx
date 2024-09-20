@@ -65,11 +65,6 @@ export default function RegisterForm() {
         showSuccessNotification(t('Register.Success.UserCreated'))
       },
     })
-    // fetch('/api/auth/create', { method: 'POST', body: JSON.stringify(values) })
-    //   .then((res) => res.json())
-    //   .then(() => {
-    //     showSuccessNotification(t('Register.Success.UserCreated'))
-    //   })
   }
 
   return (

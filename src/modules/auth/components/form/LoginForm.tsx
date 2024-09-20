@@ -8,7 +8,9 @@ import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Anchor, Button, Text, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
+import { useLoginAccountMutation } from 'auth/api'
 import clsx from 'clsx'
+import { useNotification } from 'common/hooks'
 import { object, string } from 'yup'
 
 import { ILoginFormValues } from '../../models'
@@ -25,6 +27,8 @@ const barlow = Barlow({
 export default function LoginForm() {
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
+  const { showSuccessNotification } = useNotification()
+  const { mutate: loginAccount, isPending } = useLoginAccountMutation()
 
   const form = useForm<ILoginFormValues>({
     criteriaMode: 'all',
@@ -44,7 +48,11 @@ export default function LoginForm() {
   const formValues = useMemo(() => form, [form])
 
   const handleSubmit = (values: ILoginFormValues) => {
-    console.log('values', values)
+    loginAccount(values, {
+      onSuccess: () => {
+        showSuccessNotification(t('Login.Success.UserLogged'))
+      },
+    })
   }
 
   return (
@@ -57,9 +65,10 @@ export default function LoginForm() {
       </Title>
       <FormProvider {...formValues}>
         <form className={'w-full'} onSubmit={form.handleSubmit(handleSubmit)} noValidate>
-          <LoginFormFields control={form.control} />
+          <LoginFormFields control={form.control} isLoading={isPending} />
           <div className={'mt-6 flex flex-col items-center gap-4 md:flex-row md:justify-between'}>
             <Button
+              disabled={isPending}
               type={'submit'}
               className={clsx(
                 'rounded-none uppercase duration-75 w-full md:w-auto',
