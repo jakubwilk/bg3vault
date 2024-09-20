@@ -6,9 +6,10 @@ import { Barlow } from 'next/font/google'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Anchor, Button, Title } from '@mantine/core'
+import { Anchor, Box, Button, Loader, Overlay, Text, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
-import { useCreateAccountMutation } from 'auth/api'
+import { useQueryClient } from '@tanstack/react-query'
+import { LoginAccountKey, useCreateAccountMutation, useLoginAccountMutation } from 'auth/api'
 import clsx from 'clsx'
 import { useNotification } from 'common/hooks'
 import { object, string } from 'yup'
@@ -27,8 +28,10 @@ const barlow = Barlow({
 export default function RegisterForm() {
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
+  const queryClient = useQueryClient()
   const { showSuccessNotification } = useNotification()
   const { mutate: createAccount, isPending } = useCreateAccountMutation()
+  const { mutate: loginAccount, isPending: isLoginPending } = useLoginAccountMutation()
 
   const form = useForm<IRegisterFormValues>({
     criteriaMode: 'all',
@@ -63,12 +66,41 @@ export default function RegisterForm() {
     createAccount(values, {
       onSuccess: () => {
         showSuccessNotification(t('Register.Success.UserCreated'))
+
+        loginAccount(
+          { username: values.username, password: values.password },
+          {
+            onSuccess: () => {
+              showSuccessNotification(t('Login.Success.UserLogged'))
+              console.log('zalogowano')
+            },
+          },
+        )
       },
     })
   }
 
   return (
-    <section className={'p-8 pl-16 flex flex-col gap-6 justify-start items-end'}>
+    <section className={'p-8 pl-16 flex flex-col gap-6 justify-start items-end relative'}>
+      {isLoginPending && (
+        <Overlay
+          className={'w-full h-full flex items-center justify-center p-4 md:p-8'}
+          color={'#000'}
+          backgroundOpacity={0.85}
+        >
+          <Box className={'flex flex-col items-center gap-4 bg-white px-8 py-4'}>
+            <Loader />
+            <Text>{t('Register.Success.UserLogInProgress')}</Text>
+            <Button
+              color={'red'}
+              className={clsx('w-full rounded-none uppercase', classes.loginCancelButton)}
+              onClick={() => queryClient.cancelQueries({ queryKey: [LoginAccountKey] })}
+            >
+              {tc('Action.Cancel')}
+            </Button>
+          </Box>
+        </Overlay>
+      )}
       <Title
         order={2}
         className={clsx('uppercase font-bold', classes.sectionTitle, barlow.className)}

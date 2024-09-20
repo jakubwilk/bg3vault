@@ -24,6 +24,10 @@
   }
 }
 
+.loginCancelButton {
+  letter-spacing: 0.05rem;
+}
+
 .backLink {
   color: var(--mantine-color-dark-4);
 
