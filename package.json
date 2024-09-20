@@ -38,8 +38,8 @@
     "@tiptap/react": "^2.7.1",
     "@tiptap/starter-kit": "^2.7.1",
     "@types/mdx": "^2.0.13",
+    "argon2": "^0.41.1",
     "axios": "^1.7.7",
-    "bcrypt": "^5.1.1",
     "chroma-js": "^3.0.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
@@ -59,7 +59,6 @@
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.53.0",
-    "@types/bcrypt": "^5.0.2",
     "@types/lodash": "^4.17.7",
     "@types/node": "^20.16.1",
     "@types/react": "^18.3.4",
