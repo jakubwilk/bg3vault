@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Barlow } from 'next/font/google'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Anchor, Button, Text, Title } from '@mantine/core'
@@ -25,6 +26,7 @@ const barlow = Barlow({
 })
 
 export default function LoginForm() {
+  const router = useRouter()
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
   const { showSuccessNotification } = useNotification()
@@ -51,6 +53,7 @@ export default function LoginForm() {
     loginAccount(values, {
       onSuccess: () => {
         showSuccessNotification(t('Login.Success.UserLogged'))
+        router.push('/')
       },
     })
   }

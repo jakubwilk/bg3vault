@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Barlow } from 'next/font/google'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Anchor, Box, Button, Loader, Overlay, Text, Title } from '@mantine/core'
@@ -26,6 +27,7 @@ const barlow = Barlow({
 })
 
 export default function RegisterForm() {
+  const router = useRouter()
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
   const queryClient = useQueryClient()
@@ -72,7 +74,7 @@ export default function RegisterForm() {
           {
             onSuccess: () => {
               showSuccessNotification(t('Login.Success.UserLogged'))
-              console.log('zalogowano')
+              router.push('/')
             },
           },
         )
