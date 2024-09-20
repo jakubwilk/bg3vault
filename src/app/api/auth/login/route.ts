@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     }
 
     const expireTimeForCookie = createExpireTimeForCookie(7)
-    const token = generateUUID()
+    const token = generateUUID(6)
     const updatedUser = await prisma.user.update({
       where: { username: body.username },
       data: { token },

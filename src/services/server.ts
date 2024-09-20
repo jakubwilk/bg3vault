@@ -1,31 +1,26 @@
-import * as bcrypt from 'bcrypt'
-import { isEqual } from 'lodash'
-import { v4 as uuidv4 } from 'uuid'
+import * as argon2 from 'argon2'
+import { v4 as uuidv4, v6 as uuidv6 } from 'uuid'
 
 import HttpException from './error'
 
-export function checkIfPasswordAreTheSame(firstPassword: string, secondPassword: string) {
-  if (!isEqual(firstPassword, secondPassword)) {
-    throw new Error('Hasła nie są takie same')
-  }
-
-  return true
-}
-
 export async function hashUserPassword(password: string) {
-  bcrypt.genSalt(14, (err, salt) => {
-    bcrypt.hash(password, salt, (err, hash) => {
-      if (err) {
-        HttpException.throwServerError('Wystąpił problem z utworzeniem konta')
-      }
-
-      return hash
-    })
-  })
+  try {
+    return await argon2.hash(password)
+  } catch (err) {
+    throw HttpException.throwServerError(
+      'Wystąpił wewnętrzny problem. Skontaktuj się z administratorem serwisu',
+    )
+  }
 }
 
 export async function verifyPassword(password: string, savedPassword: string) {
-  return await bcrypt.compare(password, savedPassword)
+  try {
+    return await argon2.verify(savedPassword, password)
+  } catch (err) {
+    throw HttpException.throwServerError(
+      'Wystąpił wewnętrzny problem. Skontaktuj się z administratorem serwisu',
+    )
+  }
 }
 
 export function createExpireTimeForCookie(days: number): Date {
@@ -35,6 +30,10 @@ export function createExpireTimeForCookie(days: number): Date {
   return date
 }
 
-export function generateUUID() {
-  return uuidv4()
+export function generateUUID(version: number = 4) {
+  if (version === 4) {
+    return uuidv4()
+  }
+
+  return uuidv6()
 }
