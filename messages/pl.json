@@ -1,5 +1,11 @@
 {
   "Common": {
+    "Action": {
+      "Save": "Zapisz",
+      "Edit": "Edytuj",
+      "Close": "Zamknij",
+      "Cancel": "Anuluj"
+    },
     "Exception": {
       "CreateUserExist": "Użytkownik o podanym adresie email lub loginie jest już zarejestrowany",
       "LoginUserNotExist": "Podano niepoprawny login lub hasło. Nie można odszukać takiego użytkownika",
@@ -26,6 +32,9 @@
         "back": "Powrót na stronę główną",
         "create": "Utwórz konto",
         "login": "Zaloguj się"
+      },
+      "Success": {
+        "UserLogged": "Użytkownik został zalogowany pomyślnie"
       }
     },
     "Register": {
@@ -44,7 +53,8 @@
         "create": "Zarejestruj się"
       },
       "Success": {
-        "UserCreated": "Użytkownik został utworzony pomyślnie"
+        "UserCreated": "Użytkownik został utworzony pomyślnie",
+        "UserLogInProgress": "Trwa logowanie do serwisu"
       }
     },
     "Field": {

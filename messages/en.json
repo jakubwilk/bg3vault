@@ -1,5 +1,11 @@
 {
   "Common": {
+    "Action": {
+      "Save": "Save",
+      "Edit": "Edit",
+      "Close": "Close",
+      "Cancel": "Cancel"
+    },
     "Exception": {
       "ServerCreateUserExist": "There was a problem creating an account. Contact the service administrator",
       "CreateUserExist": "User with this email address or login already exist",
@@ -27,6 +33,9 @@
         "back": "Back to homepage",
         "create": "Create account",
         "login": "Login"
+      },
+      "Success": {
+        "UserLogged": "User was successfully logged"
       }
     },
     "Register": {
@@ -45,7 +54,8 @@
         "create": "Register"
       },
       "Success": {
-        "UserCreated": "User was successfully created"
+        "UserCreated": "User was successfully created",
+        "UserLogInProgress": "Login to the application is in progress"
       }
     },
     "Field": {
