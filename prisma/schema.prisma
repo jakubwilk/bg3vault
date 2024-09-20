@@ -24,6 +24,8 @@ model User {
   createTime  DateTime
   updateTime  DateTime?
   expireTime  DateTime?
+  isBanned    Boolean?  @default(false)
+  isDeleted   Boolean?  @default(false)
 }
 
 enum Role {
