@@ -14,42 +14,38 @@ api.interceptors.request.use(
     // console.log('instance.interceptors.request.config', config)
     return config
   },
-  () => {
-    // console.log('instance.interceptors.request.error', error)
-  },
+  () => {},
 )
 
 api.interceptors.response.use(
   (response) => {
-    // console.log('instance.interceptors.response.response', response)
     return response
   },
   (error) => {
-    console.log('instance.interceptors.response.error', error)
     if (error?.response) {
       if (error.response.status === 404) {
         notifications.show({
           color: 'red',
           title: '404 Code',
-          classNames: { root: 'rounded-none' },
+          classNames: { root: 'rounded-none', icon: 'rounded-none' },
           message:
             'An attempt was made to send a query to a resource that does not exist. Contact the service administrator',
         })
         return Promise.reject(error.response)
       }
-
       if ([400, 402, 403].includes(error.response.status)) {
         notifications.show({
           color: 'red',
-          message: error.response?.data?.details,
+          message: error.response?.data,
+          classNames: { root: 'rounded-none', icon: 'rounded-none' },
         })
         return Promise.reject(error.response)
       }
-
       if (error.response.status === 500) {
         notifications.show({
           color: 'red',
-          message: error.response?.data?.title,
+          message: error.response?.data,
+          classNames: { root: 'rounded-none', icon: 'rounded-none' },
         })
         return Promise.reject(error.response)
       }
