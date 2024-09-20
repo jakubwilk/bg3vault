@@ -1,7 +1,9 @@
 {
   "Common": {
     "Exception": {
-      "CreateUserExist": "Użytkownik o podanym adresie email lub loginie jest już zarejestrowany"
+      "CreateUserExist": "Użytkownik o podanym adresie email lub loginie jest już zarejestrowany",
+      "LoginUserNotExist": "Podano niepoprawny login lub hasło. Nie można odszukać takiego użytkownika",
+      "LoginUserPasswordIncorrect": "Wprowadzono niepoprawne hasło użytkownika"
     },
     "Validation": {
       "required": "Pole jest wymagane",

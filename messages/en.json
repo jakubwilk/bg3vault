@@ -1,7 +1,10 @@
 {
   "Common": {
     "Exception": {
-      "CreateUserExist": "User with this email address or login already exist"
+      "ServerCreateUserExist": "There was a problem creating an account. Contact the service administrator",
+      "CreateUserExist": "User with this email address or login already exist",
+      "LoginUserNotExist": "An invalid login or password has been entered. User cannot be found",
+      "LoginUserPasswordIncorrect": "Incorrect user password entered"
     },
     "Validation": {
       "required": "Field is required",
