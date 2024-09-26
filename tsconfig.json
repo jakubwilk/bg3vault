@@ -22,7 +22,8 @@
       "providers": ["./src/providers/index.ts"],
       "services/*": ["./src/services/*"],
       "auth/*": ["./src/modules/auth/*"],
-      "common/*": ["./src/modules/common/*"]
+      "common/*": ["./src/modules/common/*"],
+      "users/*": ["./src/modules/users/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
