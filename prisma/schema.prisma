@@ -24,6 +24,7 @@ model User {
   createTime  DateTime
   updateTime  DateTime?
   expireTime  DateTime?
+  isActivated Boolean   @default(false)
   isBanned    Boolean?  @default(false)
   isDeleted   Boolean?  @default(false)
 }
