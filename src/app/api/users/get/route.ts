@@ -11,6 +11,8 @@ export async function GET(request: NextRequest) {
     const token = searchParams.get('auth')
     const uid = searchParams.get('uid')
 
+    console.log('token + uid', { token, uid })
+
     if (token && uid) {
       const user = await prisma.user.findUnique({ where: { id: uid } })
 
