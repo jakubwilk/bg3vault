@@ -1,6 +1,6 @@
 'use client'
 import { useMutation } from '@tanstack/react-query'
-import api from 'services/api'
+import api from 'services/fetch'
 
 export interface ICreateAccountRequest {
   email: string
@@ -11,9 +11,7 @@ export interface ICreateAccountRequest {
 export const CreateAccountKey = 'CREATE_ACCOUNT_KEY'
 
 const createAccount = async ({ email, username, password }: ICreateAccountRequest) => {
-  const { data } = await api.post('/api/auth/create', { email, username, password })
-
-  return data
+  return await api.post('api/auth/create', { email, username, password })
 }
 
 export default function useCreateAccountMutation() {
