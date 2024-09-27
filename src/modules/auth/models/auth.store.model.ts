@@ -5,6 +5,9 @@ export interface IAuthUser {
   username: string
   email: string
   role: Role
+  isActivated: boolean
+  isBanned: boolean | null
+  isDeleted: boolean | null
 }
 
 export interface IAuthReducer {
