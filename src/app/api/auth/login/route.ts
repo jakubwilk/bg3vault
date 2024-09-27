@@ -32,11 +32,12 @@ export async function POST(request: NextRequest) {
     const userDTO = getUserDTO(updatedUser as User)
 
     cookies().set('auth', token, {
-      sameSite: true,
+      sameSite: 'strict',
       secure: false,
+      priority: 'high',
       expires: expireTimeForCookie,
     })
-    cookies().set('uid', updatedUser.id, { sameSite: true })
+    cookies().set('uid', updatedUser.id, { sameSite: 'strict', priority: 'high' })
     return NextResponse.json({ data: userDTO }, { status: HttpStatus.OK })
   } catch (err) {
     const error = err as IHttpException
