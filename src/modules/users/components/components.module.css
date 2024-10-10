@@ -1,13 +1,13 @@
 .accountActivationBar {
-  background-color: var(--mantine-color-larian-6);
+  background-color: var(--mantine-color-red-8);
 }
 
 .accountActivationBarButton {
-  color: var(--mantine-color-dark-7);
+  color: var(--mantine-color-white);
   font-size: 1rem;
 
   &:hover,
   &:focus-within {
-    color: var(--mantine-color-dark-7);
+    color: var(--mantine-color-white);
   }
 }

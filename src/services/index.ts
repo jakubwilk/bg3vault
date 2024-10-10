@@ -1,4 +1,3 @@
-export { default as apiDEP } from './api-dep'
 export { default as store } from './store'
 export { type AppStore, type AppDispatch, type RootState } from './store'
 export { useDispatch, useSelector, useStore } from './config'

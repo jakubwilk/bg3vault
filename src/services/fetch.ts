@@ -36,6 +36,7 @@ export class FetchAPI {
       cache: 'no-store',
       signal: controller.signal,
     })
+
     const data = await response.json()
 
     return data

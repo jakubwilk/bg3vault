@@ -1,3 +1,5 @@
+'use client'
+
 import { Control } from 'react-hook-form'
 import { useTranslations } from 'next-intl'
 import { IRegisterFormValues } from 'auth/models'

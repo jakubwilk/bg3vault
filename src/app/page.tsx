@@ -1,17 +1,9 @@
-import { cookies } from 'next/headers'
 import Link from 'next/link'
-import api from 'services/fetch'
+import { getUserSessionData } from 'common/utils'
 import { AccountActivationBar } from 'users/components'
 
-async function getUser() {
-  const token = cookies().get('auth')?.value
-  const uid = cookies().get('uid')?.value
-
-  return await api.get(`api/users/get?auth=${token}&uid=${uid}`)
-}
-
 export default async function Home() {
-  const { data } = await getUser()
+  const { data } = await getUserSessionData()
 
   return (
     <main className={'min-h-full'}>

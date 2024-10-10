@@ -29,10 +29,10 @@ export default function AccountActivationBar({ data }: IProps) {
       <div className={'container mx-auto px-4'}>
         <Box className={'flex items-center justify-center gap-1'}>
           {isEmailSent ? (
-            <Text>{'Email has been sent, please check your mailbox'}</Text>
+            <Text className={'text-white'}>{'Email has been sent, please check your mailbox'}</Text>
           ) : (
             <Fragment>
-              <Text>
+              <Text className={'text-white'}>
                 {'Most functionality on the site is disabled until you activate your account.'}
               </Text>
               <Button
