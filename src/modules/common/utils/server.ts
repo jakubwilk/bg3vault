@@ -7,7 +7,7 @@ export const getUserSessionData = async () => {
 
   return await api.get(
     '/api/users/session' +
-      (token && uid && '?') +
+      (token && uid ? '?' : '') +
       new URLSearchParams({ ...(token && { auth: token }), ...(uid && { uid }) }),
   )
 }
