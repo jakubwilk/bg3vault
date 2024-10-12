@@ -1,9 +1,13 @@
-import { AuthRoleEnum } from './auth.model'
+import { Role } from '@prisma/client'
 
 export interface IAuthUser {
-  uid: string
-  login: string
-  role: AuthRoleEnum
+  id: string
+  username: string
+  email: string
+  role: Role
+  isActivated: boolean
+  isBanned: boolean | null
+  isDeleted: boolean | null
 }
 
 export interface IAuthReducer {
