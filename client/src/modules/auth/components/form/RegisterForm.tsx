@@ -70,7 +70,7 @@ export default function RegisterForm() {
         showSuccessNotification(t('Register.Success.UserCreated'))
 
         loginAccount(
-          { username: values.username, password: values.password },
+          { email: values.email, password: values.password },
           {
             onSuccess: () => {
               showSuccessNotification(t('Login.Success.UserLogged'))

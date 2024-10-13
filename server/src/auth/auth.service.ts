@@ -5,7 +5,7 @@ import { convertUserToUserDTO, IUserDTO, UsersService } from '@users'
 import * as argon2 from 'argon2'
 
 import { createExpireTimeForCookie, generateUUID } from './auth.helper'
-import { IAuthLoginData } from './auth.model'
+import { IAuthLoginData, IAuthRegisterData } from './auth.model'
 
 @Injectable()
 export class AuthService {
@@ -23,7 +23,21 @@ export class AuthService {
     return convertUserToUserDTO(user)
   }
 
-  async register() {}
+  async register(authRegisterData: IAuthRegisterData): Promise<void> {
+    const { email, username, password } = authRegisterData
+
+    await this.usersService.getUserByEmailAddress(email, true)
+    const hashedPassword = await this.hashUserPassword(password)
+
+    await this.prisma.user.create({
+      data: {
+        email,
+        username,
+        password: hashedPassword,
+        createTime: new Date(),
+      },
+    })
+  }
 
   async finalizeUserLogin(email: string, @Res() response) {
     const expireTimeForCookie = createExpireTimeForCookie(1)
@@ -57,7 +71,7 @@ export class AuthService {
 
   async verifyUserPassword(providedPassword: string, savedPassword: string) {
     try {
-      return await argon2.verify(providedPassword, savedPassword)
+      return await argon2.verify(savedPassword, providedPassword)
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       throw new HttpException(

@@ -1,6 +1,6 @@
 import { Body, Controller, HttpStatus, Post, Res } from '@nestjs/common'
 
-import { IAuthLoginData } from './auth.model'
+import { IAuthLoginData, IAuthRegisterData } from './auth.model'
 import { AuthService } from './auth.service'
 
 @Controller('auth')
@@ -9,14 +9,6 @@ export class AuthController {
 
   @Post('/login')
   async login(@Body() authLoginData: IAuthLoginData, @Res() response) {
-    // try {
-    //   const user = await this.authService.login(authLoginData)
-    //   await this.authService.finalizeUserLogin(authLoginData.email, response)
-
-    //   return response.json({ status: HttpStatus.OK, data: user })
-    // } catch (error) {
-    //   return response.json(error)
-    // }
     const user = await this.authService.login(authLoginData)
     await this.authService.finalizeUserLogin(authLoginData.email, response)
 
@@ -24,7 +16,10 @@ export class AuthController {
   }
 
   @Post('/register')
-  async register() {
-    return this.authService.register()
+  async register(@Body() authRegisterData: IAuthRegisterData, @Res() response) {
+    await this.authService.register(authRegisterData)
+    await this.authService.finalizeUserLogin(authRegisterData.email, response)
+
+    return response.json({ status: HttpStatus.CREATED })
   }
 }
