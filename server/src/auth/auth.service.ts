@@ -1,11 +1,11 @@
 import { DatabaseService } from '@database'
-import { HttpException, HttpStatus, Injectable, Res } from '@nestjs/common'
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
 import { User } from '@prisma/client'
 import { convertUserToUserDTO, IUserDTO, UsersService } from '@users'
 import * as argon2 from 'argon2'
 
-import { createExpireTimeForCookie, generateUUID } from './auth.helper'
-import { IAuthLoginData, IAuthRegisterData } from './auth.model'
+import { generateUUID } from './auth.helper'
+import { IAuthFinalizeLoginData, IAuthLoginData, IAuthRegisterData } from './auth.model'
 
 @Injectable()
 export class AuthService {
@@ -39,8 +39,7 @@ export class AuthService {
     })
   }
 
-  async finalizeUserLogin(email: string, @Res() response) {
-    const expireTimeForCookie = createExpireTimeForCookie(1)
+  async finalizeUserLogin(email: string): Promise<IAuthFinalizeLoginData> {
     const token = generateUUID(6)
 
     const updatedUser = await this.prisma.user.update({
@@ -48,13 +47,7 @@ export class AuthService {
       data: { token },
     })
 
-    response.cookie('auth', token, {
-      sameSite: 'strict',
-      secure: false,
-      priority: 'high',
-      expires: expireTimeForCookie,
-    })
-    response.cookie('uid', updatedUser.id, { sameSite: 'strict', priority: 'high' })
+    return { authToken: token, uid: updatedUser.id }
   }
 
   async hashUserPassword(password: string) {

@@ -7,10 +7,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Anchor, Box, Button, Loader, Overlay, Text, Title } from '@mantine/core'
+import { Anchor, Button, Title } from '@mantine/core'
 import { IconChevronLeft } from '@tabler/icons-react'
-import { useQueryClient } from '@tanstack/react-query'
-import { LoginAccountKey, useCreateAccountMutation, useLoginAccountMutation } from 'auth/api'
+import { useCreateAccountMutation, useLoginAccountMutation } from 'auth/api'
 import clsx from 'clsx'
 import { useNotification } from 'common/hooks'
 import { object, string } from 'yup'
@@ -30,7 +29,6 @@ export default function RegisterForm() {
   const router = useRouter()
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
-  const queryClient = useQueryClient()
   const { showSuccessNotification } = useNotification()
   const { mutate: createAccount, isPending } = useCreateAccountMutation()
   const { mutate: loginAccount, isPending: isLoginPending } = useLoginAccountMutation()
@@ -64,6 +62,8 @@ export default function RegisterForm() {
 
   const formValues = useMemo(() => form, [form])
 
+  const isLoading = useMemo(() => isPending || isLoginPending, [isPending, isLoginPending])
+
   const handleSubmit = (values: IRegisterFormValues) => {
     createAccount(values, {
       onSuccess: () => {
@@ -84,25 +84,6 @@ export default function RegisterForm() {
 
   return (
     <section className={'p-8 pl-16 flex flex-col gap-6 justify-start items-end relative'}>
-      {isLoginPending && (
-        <Overlay
-          className={'w-full h-full flex items-center justify-center p-4 md:p-8'}
-          color={'#000'}
-          backgroundOpacity={0.85}
-        >
-          <Box className={'flex flex-col items-center gap-4 bg-white px-8 py-4'}>
-            <Loader />
-            <Text>{t('Register.Success.UserLogInProgress')}</Text>
-            <Button
-              color={'red'}
-              className={clsx('w-full rounded-none uppercase', classes.loginCancelButton)}
-              onClick={() => queryClient.cancelQueries({ queryKey: [LoginAccountKey] })}
-            >
-              {tc('Action.Cancel')}
-            </Button>
-          </Box>
-        </Overlay>
-      )}
       <Title
         order={2}
         className={clsx('uppercase font-bold', classes.sectionTitle, barlow.className)}
@@ -111,10 +92,10 @@ export default function RegisterForm() {
       </Title>
       <FormProvider {...formValues}>
         <form className={'w-full'} onSubmit={form.handleSubmit(handleSubmit)} noValidate>
-          <RegisterFormFields control={form.control} isLoading={isPending} />
+          <RegisterFormFields control={form.control} isLoading={isLoading} />
           <div className={'mt-6 flex flex-col items-center gap-4 md:flex-row md:justify-between'}>
             <Button
-              disabled={isPending}
+              disabled={isLoading}
               type={'submit'}
               className={clsx(
                 'rounded-none uppercase duration-75 w-full md:w-auto',

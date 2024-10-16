@@ -1,15 +1,41 @@
 import { RequestInit } from 'next/dist/server/web/spec-extension/request'
-import { notifications } from '@mantine/notifications'
+import { omit } from 'lodash'
+// import { notifications } from '@mantine/notifications'
+
+export interface IRequestInit extends RequestInit {
+  isSelf?: boolean
+}
 
 export class FetchAPI {
   private readonly _baseAPIUrl: string
+  private readonly _baseSelfAPIUrl: string
+  private readonly _requestOptions: RequestInit
 
   constructor() {
-    this._baseAPIUrl = process.env['BASE_API_URL'] || ''
+    const controller = new AbortController()
+
+    this._baseAPIUrl = process.env['NEXT_PUBLIC_BASE_API_URL'] || ''
+    this._baseSelfAPIUrl = process.env['NEXT_PUBLIC_BASE_SELF_API_URL'] || ''
+    this._requestOptions = {
+      cache: 'no-store',
+      signal: controller.signal,
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
   }
 
   get baseAPIUrl(): string {
     return this._baseAPIUrl
+  }
+
+  get baseSelfAPIUrl(): string {
+    return this._baseSelfAPIUrl
+  }
+
+  get requestOptions(): RequestInit {
+    return this._requestOptions
   }
 
   async handleError(response: Response) {
@@ -21,20 +47,22 @@ export class FetchAPI {
 
   catchError(err: unknown) {
     const error = err as Error
-    notifications.show({
-      color: 'red',
-      message: error.message.replaceAll('"', ''),
-      classNames: { root: 'rounded-none', icon: 'rounded-none' },
-    })
+    // notifications.show({
+    //   color: 'red',
+    //   message: error.message.replaceAll('"', ''),
+    //   classNames: { root: 'rounded-none', icon: 'rounded-none' },
+    // })
     return Promise.reject(error)
   }
 
-  async get(url: string, init?: RequestInit) {
-    const controller = new AbortController()
-    const response = await fetch(`${this.baseAPIUrl}/${url}`, {
-      ...init,
-      cache: 'no-store',
-      signal: controller.signal,
+  async get(url: string, init?: IRequestInit) {
+    const isSelf = init?.isSelf
+    const base = isSelf ? this.baseSelfAPIUrl : this.baseAPIUrl
+    const options = omit(init, 'isSelf')
+
+    const response = await fetch(base + url, {
+      ...options,
+      ...this.requestOptions,
     })
 
     const data = await response.json()
@@ -42,15 +70,17 @@ export class FetchAPI {
     return data
   }
 
-  async post<T extends object>(url: string, body: T, init?: RequestInit) {
+  async post<T extends object>(url: string, body: T, init?: IRequestInit) {
     try {
-      const controller = new AbortController()
-      const response = await fetch(`${this.baseAPIUrl}/${url}`, {
-        ...init,
+      const isSelf = init?.isSelf
+      const base = isSelf ? this.baseSelfAPIUrl : this.baseAPIUrl
+      const options = omit(init, 'isSelf')
+
+      const response = await fetch(base + url, {
+        ...options,
         method: 'POST',
         body: JSON.stringify(body),
-        cache: 'no-store',
-        signal: controller.signal,
+        ...this.requestOptions,
       })
 
       await this.handleError(response)

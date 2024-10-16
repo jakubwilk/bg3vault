@@ -1,3 +1,5 @@
+import { IUser } from 'users/models'
+
 export enum AuthRoleEnum {
   // eslint-disable-next-line no-unused-vars
   USER = 'USER',
@@ -16,4 +18,10 @@ export interface IRegisterFormValues {
   email: string
   username: string
   password: string
+}
+
+export interface IAuthLoginResponse {
+  user: IUser
+  authToken: string
+  uid: string
 }

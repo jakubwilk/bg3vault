@@ -1,5 +1,8 @@
 // import { cookies } from 'next/headers'
+import { cookies } from 'next/headers'
 import { NextRequest } from 'next/server'
+import { IAuthLoginResponse, ILoginFormValues } from 'auth/models'
+// import { axios } from 'services/index'
 // import { getTranslations } from 'next-intl/server'
 // import { User } from '@prisma/client'
 // import prisma from 'db'
@@ -11,7 +14,23 @@ import api from 'services/fetch'
 export async function POST(request: NextRequest) {
   const { email, password } = await request.json()
 
-  return api.post('auth/login', { email, password }, { credentials: 'include' })
+  const { data } = await api.post<ILoginFormValues>('/auth/login', { email, password })
+
+  if (data) {
+    const { authToken, uid } = data as IAuthLoginResponse
+    const expireAuthTokenDate = new Date()
+    expireAuthTokenDate.setTime(expireAuthTokenDate.getTime() + 1 * 24 * 60 * 60 * 1000)
+
+    cookies().set('auth', authToken, {
+      sameSite: 'strict',
+      secure: false,
+      priority: 'high',
+      expires: expireAuthTokenDate,
+    })
+    cookies().set('uid', uid, { sameSite: 'strict', priority: 'high' })
+  }
+
+  return data
 
   // try {
   //   const t = await getTranslations('Common')
@@ -36,13 +55,13 @@ export async function POST(request: NextRequest) {
   //   })
   //   const userDTO = getUserDTO(updatedUser as User)
 
-  //   cookies().set('auth', token, {
-  //     sameSite: 'strict',
-  //     secure: false,
-  //     priority: 'high',
-  //     expires: expireTimeForCookie,
-  //   })
-  //   cookies().set('uid', updatedUser.id, { sameSite: 'strict', priority: 'high' })
+  // cookies().set('auth', token, {
+  //   sameSite: 'strict',
+  //   secure: false,
+  //   priority: 'high',
+  //   expires: expireTimeForCookie,
+  // })
+  // cookies().set('uid', updatedUser.id, { sameSite: 'strict', priority: 'high' })
   //   return NextResponse.json({ data: userDTO }, { status: HttpStatus.OK })
   // } catch (err) {
   //   const error = err as IHttpException

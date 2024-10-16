@@ -10,15 +10,14 @@ export class AuthController {
   @Post('/login')
   async login(@Body() authLoginData: IAuthLoginData, @Res() response) {
     const user = await this.authService.login(authLoginData)
-    await this.authService.finalizeUserLogin(authLoginData.email, response)
+    const { authToken, uid } = await this.authService.finalizeUserLogin(authLoginData.email)
 
-    return response.json({ status: HttpStatus.OK, data: user })
+    return response.json({ status: HttpStatus.OK, data: { user, authToken, uid } })
   }
 
   @Post('/register')
   async register(@Body() authRegisterData: IAuthRegisterData, @Res() response) {
     await this.authService.register(authRegisterData)
-    await this.authService.finalizeUserLogin(authRegisterData.email, response)
 
     return response.json({ status: HttpStatus.CREATED })
   }

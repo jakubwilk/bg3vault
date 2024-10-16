@@ -8,3 +8,8 @@ export interface IAuthRegisterData {
   username: string
   password: string
 }
+
+export interface IAuthFinalizeLoginData {
+  authToken: string
+  uid: string
+}

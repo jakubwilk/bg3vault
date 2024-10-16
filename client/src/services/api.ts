@@ -4,6 +4,10 @@ import axios, { AxiosInstance } from 'axios'
 const api: AxiosInstance = axios.create({
   baseURL: process.env['NEXT_PUBLIC_BASE_API_URL'],
   timeout: 24000,
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 })
 
 api.interceptors.request.use(
@@ -12,8 +16,6 @@ api.interceptors.request.use(
     // config.headers.Authorization = `Bearer ${token}`
 
     // console.log('instance.interceptors.request.config', config)
-    config.headers['Content-Type'] = 'application/json'
-
     return config
   },
   () => {
