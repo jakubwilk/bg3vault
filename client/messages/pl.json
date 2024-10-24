@@ -15,12 +15,17 @@
       "required": "Pole jest wymagane",
       "email": "Niepoprawny adres email",
       "password": "Niepoprawne hasło"
+    },
+    "Navigation": {
+      "login": "Logowanie",
+      "register": "Rejestracja"
     }
   },
   "AuthPage": {
     "Login": {
       "title": "BG3Vault | Logowanie do aplikacji",
       "description": "Zaloguj się do BG3Vault, by móc zarządzać swoimi buildami lub dodawać nowe i tym samym rozwijać aplikacje",
+      "forgotPassword": "Masz problem z zalogowaniem się?",
       "Form": {
         "title": "Logowanie"
       },
@@ -31,7 +36,8 @@
       "Action": {
         "back": "Powrót na stronę główną",
         "create": "Utwórz konto",
-        "login": "Zaloguj się"
+        "login": "Zaloguj się",
+        "recover": "Odzyskaj hasło"
       },
       "Success": {
         "UserLogged": "Użytkownik został zalogowany pomyślnie"
