@@ -1,15 +1,17 @@
 import { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
+import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
-import { getLocale, getMessages } from 'next-intl/server'
+import { getMessages } from 'next-intl/server'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import { Notifications } from '@mantine/notifications'
+import { routing } from 'i18n/routing'
 import { ReactQueryProvider, StoreProvider } from 'providers'
 
 import '@mantine/core/styles.css'
 import '@mantine/notifications/styles.css'
-import './globals.css'
+import '../globals.css'
 
 const barlow = Barlow({
   subsets: ['latin-ext'],
@@ -23,10 +25,16 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: ReactNode
+
+  params: { locale: string }
 }>) {
-  const locale = await getLocale()
+  if (!routing.locales.includes(locale as any)) {
+    notFound()
+  }
+
   const messages = await getMessages()
 
   return (

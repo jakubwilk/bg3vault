@@ -1,9 +1,12 @@
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
+import { LanguageSwitcher } from 'common/components'
 import { getUserSessionData } from 'common/utils'
+import { Link } from 'i18n/routing'
 import { AccountActivationBar } from 'users/components'
 
 export default async function Home() {
   const { data } = await getUserSessionData()
+  const t = await getTranslations('Common')
 
   return (
     <main className={'min-h-full'}>
@@ -12,11 +15,12 @@ export default async function Home() {
         <div className={'min-h-[inherit] flex flex-col gap-6 px-4'}>
           <div className={'flex items-center justify-center gap-4'}>
             <Link href={'/login'} className={'text-white'}>
-              {'Logowanie'}
+              {t('Navigation.login')}
             </Link>
             <Link href={'/register'} className={'text-white'}>
-              {'Rejestracja'}
+              {t('Navigation.register')}
             </Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

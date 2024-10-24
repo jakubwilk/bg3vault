@@ -30,7 +30,7 @@ export default function LoginForm() {
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
   const { showSuccessNotification } = useNotification()
-  const { mutate: loginAccount, isPending } = useLoginAccountMutation()
+  const { loginAccount, isPending } = useLoginAccountMutation()
 
   const form = useForm<ILoginFormValues>({
     criteriaMode: 'all',
@@ -49,13 +49,11 @@ export default function LoginForm() {
 
   const formValues = useMemo(() => form, [form])
 
-  const handleSubmit = (values: ILoginFormValues) => {
-    loginAccount(values, {
-      onSuccess: () => {
-        showSuccessNotification(t('Login.Success.UserLogged'))
-        router.push('/')
-      },
-    })
+  const handleSubmit = async (values: ILoginFormValues) => {
+    await loginAccount(values)
+
+    showSuccessNotification(t('Login.Success.UserLogged'))
+    router.push('/')
   }
 
   return (
@@ -81,7 +79,7 @@ export default function LoginForm() {
               {t('Login.Action.login')}
             </Button>
             <Text className={'flex flex-row gap-1 md:gap-0 md:flex-col'}>
-              {'Problem with logging in?'}
+              {t('Login.forgotPassword')}
               <Anchor
                 component={Link}
                 href={'/recover'}
@@ -90,7 +88,7 @@ export default function LoginForm() {
                   classes.recoverLink,
                 )}
               >
-                {'Recover password'}
+                {t('Login.Action.recover')}
               </Anchor>
             </Text>
           </div>
