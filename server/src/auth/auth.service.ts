@@ -16,6 +16,7 @@ export class AuthService {
 
   async login(authLoginData: IAuthLoginData): Promise<IUserDTO> {
     const { email, password } = authLoginData
+
     const user: User = await this.usersService.getUserByEmailAddress(email)
 
     await this.verifyUserPassword(password, user.password)
@@ -63,14 +64,15 @@ export class AuthService {
   }
 
   async verifyUserPassword(providedPassword: string, savedPassword: string) {
-    try {
-      return await argon2.verify(savedPassword, providedPassword)
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (err) {
-      throw new HttpException(
-        'Proszę sprawdzić czy podano poprawny login lub hasło',
-        HttpStatus.NOT_FOUND,
-      )
+    const result = await argon2.verify(savedPassword, providedPassword)
+
+    if (result) {
+      return true
     }
+
+    throw new HttpException(
+      'Proszę sprawdzić czy podano poprawny login lub hasło',
+      HttpStatus.NOT_FOUND,
+    )
   }
 }
