@@ -19,6 +19,10 @@
     "Navigation": {
       "login": "Logowanie",
       "register": "Rejestracja"
+    },
+    "Lang": {
+      "pl": "Polski",
+      "en": "English"
     }
   },
   "AuthPage": {
