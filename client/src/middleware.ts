@@ -30,5 +30,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(pl|en)/:path*', '/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: [
+    '/',
+    '/(pl|en)/:path*',
+    '/((?!api|_next/static|assets|_next/image|favicon.ico|globals.css).*)',
+  ],
 }
