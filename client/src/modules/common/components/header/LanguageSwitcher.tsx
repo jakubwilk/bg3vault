@@ -1,10 +1,10 @@
-'use client'
+import { useLocale } from 'next-intl'
+import { routing } from 'i18n/routing'
+
+import LanguageSwitcherDropdown from './LanguageSwitcherDropdown'
 
 export default function LanguageSwitcher() {
-  return (
-    <div className={'flex items-center gap-2'}>
-      <button>{'en'}</button>
-      <button>{'pl'}</button>
-    </div>
-  )
+  const locale = useLocale()
+
+  return <LanguageSwitcherDropdown langs={routing.locales} value={locale} />
 }
