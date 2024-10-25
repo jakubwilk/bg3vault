@@ -1,3 +1,5 @@
+'use client'
+
 import { ChangeEvent, ComponentPropsWithoutRef } from 'react'
 import { Control, Controller } from 'react-hook-form'
 import { Barlow } from 'next/font/google'
