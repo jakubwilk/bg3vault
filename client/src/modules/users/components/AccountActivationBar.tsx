@@ -38,7 +38,7 @@ export default function AccountActivationBar({ data }: IProps) {
               <Button
                 color={'transparent'}
                 className={clsx(
-                  'p-0 h-auto font-normal underline duration-100 hover:no-underline hover:bg-transparent focus-within:no-underline focus-within:bg-transparent',
+                  'p-0 h-auto font-normal underline duration-75 hover:no-underline hover:bg-transparent focus-within:no-underline focus-within:bg-transparent',
                   classes.accountActivationBarButton,
                 )}
                 onClick={handleSendActivationLink}

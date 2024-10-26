@@ -4,7 +4,10 @@ import { useCallback, useTransition } from 'react'
 import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { Button, Menu } from '@mantine/core'
+import clsx from 'clsx'
 import { usePathname, useRouter } from 'i18n/routing'
+
+import classes from './header.module.css'
 
 interface IProps {
   langs: readonly ['en', 'pl']
@@ -31,9 +34,11 @@ export default function LanguageSwitcherDropdown({ value, langs }: IProps) {
   )
 
   return (
-    <Menu shadow={undefined}>
+    <Menu shadow={undefined} radius={0}>
       <Menu.Target>
-        <Button>{value.toUpperCase()}</Button>
+        <Button className={clsx('h-16 w-16', classes.languageSwitcherButton)} radius={0}>
+          {value.toUpperCase()}
+        </Button>
       </Menu.Target>
       <Menu.Dropdown>
         {langs.map((lang) => (
