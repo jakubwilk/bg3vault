@@ -1,10 +1,9 @@
-import { Role } from '@prisma/client'
-
 export interface IAuthUser {
   id: string
   username: string
   email: string
-  role: Role
+  // TODO: Fix typo
+  role: any
   isActivated: boolean
   isBanned: boolean | null
   isDeleted: boolean | null
