@@ -18,8 +18,9 @@
       "password": "Incorrect password"
     },
     "Navigation": {
+      "guest": "guest menu",
       "login": "Sign in",
-      "register": "Sign up"
+      "register": "Register"
     },
     "Lang": {
       "pl": "Polski",

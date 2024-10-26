@@ -17,6 +17,7 @@
       "password": "Niepoprawne hasło"
     },
     "Navigation": {
+      "guest": "menu gościa",
       "login": "Logowanie",
       "register": "Rejestracja"
     },
