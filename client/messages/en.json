@@ -16,12 +16,22 @@
       "required": "Field is required",
       "email": "Incorrect email address",
       "password": "Incorrect password"
+    },
+    "Navigation": {
+      "guest": "guest menu",
+      "login": "Sign in",
+      "register": "Register"
+    },
+    "Lang": {
+      "pl": "Polski",
+      "en": "English"
     }
   },
   "AuthPage": {
     "Login": {
       "title": "BG3Vault | Login into app",
       "description": "Log in to BG3Vault to manage your builds or add new ones and thus develop applications",
+      "forgotPassword": "Problem with logging in?",
       "Form": {
         "title": "Logging"
       },
@@ -32,7 +42,8 @@
       "Action": {
         "back": "Back to homepage",
         "create": "Create account",
-        "login": "Login"
+        "login": "Login",
+        "recover": "Recover password"
       },
       "Success": {
         "UserLogged": "User was successfully logged"

@@ -1,2 +1,2 @@
-export { default as authSlice } from './auth.store'
-export * from './auth.store'
+export { default as auth } from './auth.slice'
+export * from './auth.slice'

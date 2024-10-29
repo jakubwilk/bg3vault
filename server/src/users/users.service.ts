@@ -18,8 +18,6 @@ export class UsersService {
       )
     }
 
-    console.log('user && isRegisterStep', user && isRegisterStep)
-
     if (user && isRegisterStep) {
       throw new HttpException(
         'Użytkownik o podanym adresie email już istnieje',

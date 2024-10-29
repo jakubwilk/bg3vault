@@ -3,7 +3,6 @@
 import { useMemo } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Barlow } from 'next/font/google'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -12,6 +11,7 @@ import { IconChevronLeft } from '@tabler/icons-react'
 import { useLoginAccountMutation } from 'auth/api'
 import clsx from 'clsx'
 import { useNotification } from 'common/hooks'
+import { Link } from 'i18n/routing'
 import { object, string } from 'yup'
 
 import { ILoginFormValues } from '../../models'
@@ -30,7 +30,7 @@ export default function LoginForm() {
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
   const { showSuccessNotification } = useNotification()
-  const { mutate: loginAccount, isPending } = useLoginAccountMutation()
+  const { loginAccount, isPending } = useLoginAccountMutation()
 
   const form = useForm<ILoginFormValues>({
     criteriaMode: 'all',
@@ -49,13 +49,11 @@ export default function LoginForm() {
 
   const formValues = useMemo(() => form, [form])
 
-  const handleSubmit = (values: ILoginFormValues) => {
-    loginAccount(values, {
-      onSuccess: () => {
-        showSuccessNotification(t('Login.Success.UserLogged'))
-        router.push('/')
-      },
-    })
+  const handleSubmit = async (values: ILoginFormValues) => {
+    await loginAccount(values)
+
+    showSuccessNotification(t('Login.Success.UserLogged'))
+    router.push('/')
   }
 
   return (
@@ -81,7 +79,7 @@ export default function LoginForm() {
               {t('Login.Action.login')}
             </Button>
             <Text className={'flex flex-row gap-1 md:gap-0 md:flex-col'}>
-              {'Problem with logging in?'}
+              {t('Login.forgotPassword')}
               <Anchor
                 component={Link}
                 href={'/recover'}
@@ -90,7 +88,7 @@ export default function LoginForm() {
                   classes.recoverLink,
                 )}
               >
-                {'Recover password'}
+                {t('Login.Action.recover')}
               </Anchor>
             </Text>
           </div>

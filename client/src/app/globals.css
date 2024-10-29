@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg3vault-bg-main-color: #141414;
+}
+
 html {
   min-height: 100%;
   font-size: 100%;
@@ -10,7 +14,7 @@ html {
 body {
   font-size: 1rem;
   height: 100%;
-  background-color: #141414;
+  background-color: var(--bg3vault-bg-main-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;

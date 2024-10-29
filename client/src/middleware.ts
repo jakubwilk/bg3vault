@@ -1,11 +1,20 @@
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
+import { routing } from 'i18n/routing'
+
+const intlMiddlewre = createMiddleware(routing)
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('auth')?.value
   const uid = request.cookies.get('uid')?.value
 
   const hasTokenAndUid = token && uid
+  const intlResponse = intlMiddlewre(request)
+
+  if (intlResponse) {
+    return intlResponse
+  }
 
   if (hasTokenAndUid) {
     if (request.nextUrl.pathname.startsWith('/login')) {
@@ -22,13 +31,8 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/',
+    '/(pl|en)/:path*',
+    '/((?!api|_next/static|assets|_next/image|favicon.ico|globals.css).*)',
   ],
 }
