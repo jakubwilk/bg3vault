@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg3vault-bg-main-color: #141414;
+}
+
+html {
+  min-height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  height: 100%;
+  background-color: var(--bg3vault-bg-main-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active,
+a:active {
+  transform: translateY(0) !important;
+}
+
+*::selection {
+  color: var(--mantine-color-black);
+  background-color: var(--mantine-color-larian-5);
+}
+
+a:focus,
+a:focus-visible,
+a:focus-within {
+  border-radius: 0;
+}
