@@ -8,6 +8,11 @@ export interface ILoginAccountRequest {
   password: string
 }
 
+interface ILoginAccountRequestInit {
+  onSuccess?: () => void
+  onError?: () => void
+}
+
 export default function useLoginAccountMutation() {
   const { showErrorNotification } = useNotification()
   const [isPending, setIsPending] = useState(false)
@@ -15,13 +20,13 @@ export default function useLoginAccountMutation() {
   const [data, setData] = useState<IAuthLoginResponse | null>(null)
 
   const loginAccount = useCallback(
-    async ({ email, password }: ILoginAccountRequest) => {
+    async (values: ILoginAccountRequest, { onSuccess, onError }: ILoginAccountRequestInit) => {
       try {
         setIsPending(true)
         const response = await fetch('/api/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password }),
+          body: JSON.stringify(values),
         })
 
         const result = await response.json()
@@ -29,10 +34,19 @@ export default function useLoginAccountMutation() {
         if (!response.ok) {
           showErrorNotification(result.message)
           setError(result.message)
+
+          if (onError) {
+            onError()
+          }
+
           return
         }
 
         setData(result)
+
+        if (onSuccess) {
+          onSuccess()
+        }
       } catch (err) {
         console.error('useLoginAccountMutation: ' + err)
         setError('Unknown error')

@@ -1,8 +1,7 @@
 'use client'
-import { useMutation } from '@tanstack/react-query'
-// import axios from 'axios'
-// import { axios } from 'services/index'
-import api from 'services/fetch'
+
+import { useCallback, useState } from 'react'
+import { useNotification } from 'common/hooks'
 
 export interface ICreateAccountRequest {
   email: string
@@ -10,12 +9,51 @@ export interface ICreateAccountRequest {
   password: string
 }
 
-export const CreateAccountKey = 'CREATE_ACCOUNT_KEY'
-
-const createAccount = async ({ email, username, password }: ICreateAccountRequest) => {
-  return await api.post('/api/auth/create', { email, username, password }, { isSelf: true })
+interface ICreateAccountRequestInit {
+  onSuccess?: () => void
+  onError?: () => void
 }
 
 export default function useCreateAccountMutation() {
-  return useMutation({ mutationKey: [CreateAccountKey], mutationFn: createAccount })
+  const { showErrorNotification } = useNotification()
+  const [isPending, setIsPending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const createAccount = useCallback(
+    async (values: ICreateAccountRequest, { onSuccess, onError }: ICreateAccountRequestInit) => {
+      try {
+        setIsPending(true)
+        const response = await fetch('/api/auth/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(values),
+        })
+
+        const result = await response.json()
+
+        if (!response.ok) {
+          showErrorNotification(result.message)
+          setError(result.message)
+
+          if (onError) {
+            onError()
+          }
+
+          return
+        }
+
+        if (onSuccess) {
+          onSuccess()
+        }
+      } catch (err) {
+        console.error('useCreateAccountMutation ' + err)
+        setError('Unknown error')
+      } finally {
+        setIsPending(false)
+      }
+    },
+    [showErrorNotification],
+  )
+
+  return { createAccount, isPending, error }
 }
