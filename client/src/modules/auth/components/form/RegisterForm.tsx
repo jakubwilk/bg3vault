@@ -10,8 +10,7 @@ import { IconChevronLeft } from '@tabler/icons-react'
 import { useCreateAccountMutation, useLoginAccountMutation } from 'auth/api'
 import clsx from 'clsx'
 import { useNotification } from 'common/hooks'
-// import { Link, useRouter } from 'i18n/routing'
-import { Link } from 'i18n/routing'
+import { Link, useRouter } from 'i18n/routing'
 import { object, string } from 'yup'
 
 import { IRegisterFormValues } from '../../models'
@@ -26,11 +25,11 @@ const barlow = Barlow({
 })
 
 export default function RegisterForm() {
-  // const router = useRouter()
+  const router = useRouter()
   const tc = useTranslations('Common')
   const t = useTranslations('AuthPage')
   const { showSuccessNotification } = useNotification()
-  const { mutate: createAccount, isPending } = useCreateAccountMutation()
+  const { createAccount, isPending } = useCreateAccountMutation()
   const { loginAccount, isPending: isLoginPending } = useLoginAccountMutation()
 
   const form = useForm<IRegisterFormValues>({
@@ -71,12 +70,12 @@ export default function RegisterForm() {
 
         loginAccount(
           { email: values.email, password: values.password },
-          // {
-          //   onSuccess: () => {
-          //     showSuccessNotification(t('Login.Success.UserLogged'))
-          //     router.push('/')
-          //   },
-          // },
+          {
+            onSuccess: () => {
+              showSuccessNotification(t('Login.Success.UserLogged'))
+              router.push('/')
+            },
+          },
         )
       },
     })
