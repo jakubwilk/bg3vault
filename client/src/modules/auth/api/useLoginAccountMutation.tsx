@@ -20,7 +20,7 @@ export default function useLoginAccountMutation() {
   const [data, setData] = useState<IAuthLoginResponse | null>(null)
 
   const loginAccount = useCallback(
-    async (values: ILoginAccountRequest, { onSuccess, onError }: ILoginAccountRequestInit) => {
+    async (values: ILoginAccountRequest, { onSuccess, onError }: ILoginAccountRequestInit = {}) => {
       try {
         setIsPending(true)
         const response = await fetch('/api/auth/login', {

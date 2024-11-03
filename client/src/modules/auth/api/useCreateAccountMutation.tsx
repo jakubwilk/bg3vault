@@ -20,7 +20,10 @@ export default function useCreateAccountMutation() {
   const [error, setError] = useState<string | null>(null)
 
   const createAccount = useCallback(
-    async (values: ICreateAccountRequest, { onSuccess, onError }: ICreateAccountRequestInit) => {
+    async (
+      values: ICreateAccountRequest,
+      { onSuccess, onError }: ICreateAccountRequestInit = {},
+    ) => {
       try {
         setIsPending(true)
         const response = await fetch('/api/auth/create', {
