@@ -33,6 +33,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(data, { status: response.status })
   } catch (error) {
     console.error('Error', error)
-    return NextResponse.json({ message: 'cycki' }, { status: 500 })
+    return NextResponse.json({ message: 'message' }, { status: 500 })
   }
 }
