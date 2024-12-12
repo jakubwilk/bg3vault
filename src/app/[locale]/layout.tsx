@@ -3,8 +3,7 @@ import localFont from 'next/font/local'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
-
-import { routing } from '@/i18n'
+import { routing } from 'i18n'
 
 import '@mantine/core/styles.css'
 import '@mantine/notifications/styles.css'
