@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "i18n": ["./src/i18n/index.ts"],
+      "auth/*": ["./src/modules/auth/*"],
+      "common/*": ["./src/modules/common/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
