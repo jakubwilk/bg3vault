@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,12 +19,15 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD:tsconfig.json
+      "i18n": ["./src/i18n/index.ts"],
+=======
       "providers": ["./src/providers/index.ts"],
       "services/*": ["./src/services/*"],
       "i18n/*": ["./src/i18n/*"],
+>>>>>>> master:client/tsconfig.json
       "auth/*": ["./src/modules/auth/*"],
-      "common/*": ["./src/modules/common/*"],
-      "users/*": ["./src/modules/users/*"]
+      "common/*": ["./src/modules/common/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

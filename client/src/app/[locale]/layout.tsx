@@ -1,5 +1,7 @@
-import { ReactNode } from 'react'
 import type { Metadata } from 'next'
+<<<<<<< HEAD:src/app/layout.tsx
+import localFont from 'next/font/local'
+=======
 import { Barlow } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
@@ -8,14 +10,21 @@ import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import { Notifications } from '@mantine/notifications'
 import { routing } from 'i18n/routing'
 import { ReactQueryProvider, StoreProvider } from 'providers'
+>>>>>>> master:client/src/app/[locale]/layout.tsx
 
 import '@mantine/core/styles.css'
 import '@mantine/notifications/styles.css'
 import '../globals.css'
 
-const barlow = Barlow({
-  subsets: ['latin-ext'],
-  weight: ['400'],
+const geistSans = localFont({
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
+})
+const geistMono = localFont({
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 })
 
 export const metadata: Metadata = {
@@ -27,6 +36,10 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: Readonly<{
+<<<<<<< HEAD:src/app/layout.tsx
+  children: React.ReactNode
+}>) {
+=======
   children: ReactNode
 
   params: { locale: string }
@@ -37,41 +50,10 @@ export default async function RootLayout({
 
   const messages = await getMessages()
 
+>>>>>>> master:client/src/app/[locale]/layout.tsx
   return (
-    <html lang={locale}>
-      <head>
-        <ColorSchemeScript />
-      </head>
-      <body className={barlow.className}>
-        <NextIntlClientProvider messages={messages}>
-          <StoreProvider>
-            <MantineProvider
-              theme={{
-                primaryColor: 'larian',
-                colors: {
-                  larian: [
-                    '#FCF3CC',
-                    '#FCEFBD',
-                    '#FFEDAE',
-                    '#FFEA9D',
-                    '#FFE588',
-                    '#FFE177',
-                    '#FBDD76',
-                    '#F6D974',
-                    '#ECD070',
-                    '#D9BE69',
-                  ],
-                },
-              }}
-            >
-              <Notifications />
-              <ReactQueryProvider>
-                <div className={'flex flex-col justify-between gap-6 min-h-screen'}>{children}</div>
-              </ReactQueryProvider>
-            </MantineProvider>
-          </StoreProvider>
-        </NextIntlClientProvider>
-      </body>
+    <html lang={'en'}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   )
 }

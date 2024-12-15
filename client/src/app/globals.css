@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 :root {
+<<<<<<< HEAD:src/app/globals.css
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+=======
   --bg3vault-bg-main-color: #141414;
 }
 
@@ -34,4 +51,5 @@ a:focus,
 a:focus-visible,
 a:focus-within {
   border-radius: 0;
+>>>>>>> master:client/src/app/globals.css
 }

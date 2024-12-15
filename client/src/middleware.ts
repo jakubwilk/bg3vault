@@ -1,3 +1,9 @@
+<<<<<<< HEAD:src/middleware.ts
+export function middleware() {}
+
+export const config = {
+  matcher: ['/', '/((?!api|_next/static|assets|_next/image|favicon.ico|globals.css).*)'],
+=======
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 import createMiddleware from 'next-intl/middleware'
@@ -35,4 +41,5 @@ export const config = {
     '/(pl|en)/:path*',
     '/((?!api|_next/static|assets|_next/image|favicon.ico|globals.css).*)',
   ],
+>>>>>>> master:client/src/middleware.ts
 }
