@@ -19,6 +19,16 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD:tsconfig.json
+=======
+<<<<<<< HEAD:tsconfig.json
+      "i18n": ["./src/i18n/index.ts"],
+=======
+      "providers": ["./src/providers/index.ts"],
+      "services/*": ["./src/services/*"],
+      "i18n/*": ["./src/i18n/*"],
+>>>>>>> master:client/tsconfig.json
+>>>>>>> 4f2c7f956f783ace825d71268c1650f6c38f908a:client/tsconfig.json
       "auth/*": ["./src/modules/auth/*"],
       "common/*": ["./src/modules/common/*"]
     }
