@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://E%3A/react/bg3vault/src/modules/auth/pages/Login.tsx"],"sourcesContent":["'use client'\r\n\r\nexport default function Login() {\r\n  return <div>{'login'}</div>\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAEe,SAAS;IACtB,qBAAO,8OAAC;kBAAK;;;;;;AACf"}},
-    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
