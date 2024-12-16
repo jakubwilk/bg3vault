@@ -1,0 +1,27 @@
+.label {
+  font-weight: 400;
+}
+
+.input {
+  border-width: 2px;
+}
+
+.inputMedium {
+  min-height: 2.25rem;
+  height: 2.25rem;
+  font-size: 1rem;
+}
+
+.inputLarge {
+  min-height: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+}
+
+.labelLarge {
+  font-size: 0.85rem;
+}
+
+.descriptionLarge {
+  font-size: 0.8rem;
+}
