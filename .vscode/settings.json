@@ -31,5 +31,8 @@
   "WillLuke.nextjs.hasPrompted": true,
   "files.associations": {
     "*.module.css": "css"
+  },
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
