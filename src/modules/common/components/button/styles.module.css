@@ -1,0 +1,28 @@
+.root {
+  color: var(--mantine-color-gray-8);
+
+  &:active {
+    background-color: var(--mantine-color-main-8);
+  }
+
+  &:hover {
+    color: var(--mantine-color-black);
+  }
+}
+
+.rootSmall {
+  height: 1.625rem;
+}
+
+.rootMedium {
+  height: 2.25rem;
+}
+
+.rootLarge {
+  height: 3rem;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
