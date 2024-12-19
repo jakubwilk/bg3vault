@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Update imports and display new component in page.tsx">
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/Checkbox.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" afterDir="false" />
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Use Checkbox component in page.tsx">
+      <change afterPath="$PROJECT_DIR$/src/modules/common/components/select/Select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/common/components/select/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/common/components/select/styles.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/common/components/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -139,7 +140,7 @@
       <workItem from="1734595979235" duration="465000" />
       <workItem from="1734596455530" duration="1444000" />
       <workItem from="1734597923137" duration="1666000" />
-      <workItem from="1734620671817" duration="4348000" />
+      <workItem from="1734620671817" duration="7709000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -261,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734606829566</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add custom Checkbox component">
+      <option name="closed" value="true" />
+      <created>1734628528422</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734628528422</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Use Checkbox component in page.tsx">
+      <option name="closed" value="true" />
+      <created>1734628537099</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734628537099</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +308,8 @@
     <MESSAGE value="Update Button color" />
     <MESSAGE value="Create PasswordInput component" />
     <MESSAGE value="Update imports and display new component in page.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update imports and display new component in page.tsx" />
+    <MESSAGE value="Add custom Checkbox component" />
+    <MESSAGE value="Use Checkbox component in page.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use Checkbox component in page.tsx" />
   </component>
 </project>
