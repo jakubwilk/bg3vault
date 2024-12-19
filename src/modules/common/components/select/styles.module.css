@@ -1,0 +1,22 @@
+.root {
+    width: 100%;
+}
+
+.label {
+    font-weight: 400;
+}
+
+.input {
+    border-width: 2px;
+    min-height: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+}
+
+.dropdown {
+    border-radius: 0;
+}
+
+.option {
+    border-radius: 0;
+}

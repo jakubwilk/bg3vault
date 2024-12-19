@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Reorganize project">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Add radius props to omit type in each custom components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,12 +60,12 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/jakubwilk/baldurs-gate-3-fan-web-api.git&quot;,
-    &quot;accountId&quot;: &quot;85eb18ed-87b7-4a39-b0b1-d7c1a2f43d8b&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jakubwilk/bg3vault.git",
+    "accountId": "a7c786f1-050e-4053-9854-bc2badbb2057"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -78,9 +77,10 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;2-user-auth&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ui-controls&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jw/Projekty/bg3vault&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/react/bg3vault/src/modules/common/components/passwordInput&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -89,13 +89,16 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\jw\\Projekty\\bg3vault\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\Dev_Repository\\Web\\baldurs-gate-3-fan-web-api\\node_modules\\typescript\\lib&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;E:\\react\\bg3vault\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\react\\bg3vault\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\react\bg3vault\src\modules\common\components\passwordInput" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Dev_Repository\Web\baldurs-gate-3-fan-web-api\src\modules\common" />
       <recent name="E:\Dev_Repository\Web\baldurs-gate-3-fan-web-api\public\data" />
@@ -104,7 +107,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -128,6 +131,10 @@
       <workItem from="1722788830918" duration="3825000" />
       <workItem from="1724832260786" duration="113000" />
       <workItem from="1724832384536" duration="121000" />
+      <workItem from="1734595979235" duration="465000" />
+      <workItem from="1734596455530" duration="1444000" />
+      <workItem from="1734597923137" duration="1666000" />
+      <workItem from="1734620671817" duration="9620000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -209,7 +216,87 @@
       <option name="project" value="LOCAL" />
       <updated>1722774573354</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update webstorm settings">
+      <option name="closed" value="true" />
+      <created>1734606743434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606743434</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update TextInput root width">
+      <option name="closed" value="true" />
+      <created>1734606785194</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606785194</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update Button color">
+      <option name="closed" value="true" />
+      <created>1734606800854</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606800854</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Create PasswordInput component">
+      <option name="closed" value="true" />
+      <created>1734606816653</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606816653</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update imports and display new component in page.tsx">
+      <option name="closed" value="true" />
+      <created>1734606829566</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606829566</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add custom Checkbox component">
+      <option name="closed" value="true" />
+      <created>1734628528422</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734628528422</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Use Checkbox component in page.tsx">
+      <option name="closed" value="true" />
+      <created>1734628537099</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734628537099</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Create custom Select component">
+      <option name="closed" value="true" />
+      <created>1734632334320</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734632334320</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Use Select component in page.tsx">
+      <option name="closed" value="true" />
+      <created>1734632342213</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734632342213</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add radius props to omit type in each custom components">
+      <option name="closed" value="true" />
+      <created>1734632395587</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1734632395587</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +321,16 @@
     <MESSAGE value="Add WS files" />
     <MESSAGE value="Update packages and aliases" />
     <MESSAGE value="Reorganize project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganize project" />
+    <MESSAGE value="Update webstorm settings" />
+    <MESSAGE value="Update TextInput root width" />
+    <MESSAGE value="Update Button color" />
+    <MESSAGE value="Create PasswordInput component" />
+    <MESSAGE value="Update imports and display new component in page.tsx" />
+    <MESSAGE value="Add custom Checkbox component" />
+    <MESSAGE value="Use Checkbox component in page.tsx" />
+    <MESSAGE value="Create custom Select component" />
+    <MESSAGE value="Use Select component in page.tsx" />
+    <MESSAGE value="Add radius props to omit type in each custom components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add radius props to omit type in each custom components" />
   </component>
 </project>
