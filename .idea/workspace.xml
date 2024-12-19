@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Reorganize project">
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/passwordInput/PasswordInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/passwordInput/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/passwordInput/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/button/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/button/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/textInput/TextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/textInput/TextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/textInput/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/textInput/styles.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Update imports and display new component in page.tsx" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +131,7 @@
       <workItem from="1724832384536" duration="121000" />
       <workItem from="1734595979235" duration="465000" />
       <workItem from="1734596455530" duration="1444000" />
-      <workItem from="1734597923137" duration="976000" />
+      <workItem from="1734597923137" duration="1666000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -224,7 +213,47 @@
       <option name="project" value="LOCAL" />
       <updated>1722774573354</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update webstorm settings">
+      <option name="closed" value="true" />
+      <created>1734606743434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606743434</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update TextInput root width">
+      <option name="closed" value="true" />
+      <created>1734606785194</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606785194</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update Button color">
+      <option name="closed" value="true" />
+      <created>1734606800854</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606800854</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Create PasswordInput component">
+      <option name="closed" value="true" />
+      <created>1734606816653</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606816653</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update imports and display new component in page.tsx">
+      <option name="closed" value="true" />
+      <created>1734606829566</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734606829566</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +278,11 @@
     <MESSAGE value="Add WS files" />
     <MESSAGE value="Update packages and aliases" />
     <MESSAGE value="Reorganize project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganize project" />
+    <MESSAGE value="Update webstorm settings" />
+    <MESSAGE value="Update TextInput root width" />
+    <MESSAGE value="Update Button color" />
+    <MESSAGE value="Create PasswordInput component" />
+    <MESSAGE value="Update imports and display new component in page.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update imports and display new component in page.tsx" />
   </component>
 </project>
