@@ -1,5 +1,5 @@
 .root {
-  color: var(--mantine-color-gray-8);
+  color: var(--mantine-color-black);
 
   &:active {
     background-color: var(--mantine-color-main-8);
