@@ -9,7 +9,7 @@ import { clsx } from 'clsx'
 
 import classes from './styles.module.css'
 
-type TMantineTextInputPropsOmit = Omit<MantineTextInputProps, 'size' | 'classNames'>
+type TMantineTextInputPropsOmit = Omit<MantineTextInputProps, 'size' | 'classNames' | 'radius'>
 
 type TTextInputSize = 'medium' | 'large'
 

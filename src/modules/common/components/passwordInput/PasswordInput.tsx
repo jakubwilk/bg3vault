@@ -9,7 +9,10 @@ import { clsx } from 'clsx'
 
 import classes from './styles.module.css'
 
-type TMantinePasswordInputPropsOmit = Omit<MantinePasswordInputProps, 'size' | 'classNames'>
+type TMantinePasswordInputPropsOmit = Omit<
+  MantinePasswordInputProps,
+  'size' | 'classNames' | 'radius'
+>
 
 type TPasswordInputClassNames = {
   wrapper?: string

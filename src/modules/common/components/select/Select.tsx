@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 
 import classes from './styles.module.css'
 
-type TMantineSelectPropsOmit = Omit<MantineSelectProps, 'size' | 'classNames'>
+type TMantineSelectPropsOmit = Omit<MantineSelectProps, 'size' | 'classNames' | 'radius'>
 
 type TSelectClassNames = {
   wrapper?: string

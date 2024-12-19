@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 
 import classes from './styles.module.css'
 
-type TMantineCheckboxPropsOmit = Omit<MantineCheckboxProps, 'size' | 'classNames'>
+type TMantineCheckboxPropsOmit = Omit<MantineCheckboxProps, 'size' | 'classNames' | 'radius'>
 
 type TCheckboxClassNames = {
   root?: string

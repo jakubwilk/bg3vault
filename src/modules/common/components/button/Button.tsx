@@ -6,7 +6,7 @@ import { clsx } from 'clsx'
 
 import classes from './styles.module.css'
 
-type TMantineButtonPropsOmit = Omit<MantineButtonProps, 'size' | 'classNames'>
+type TMantineButtonPropsOmit = Omit<MantineButtonProps, 'size' | 'classNames' | 'radius'>
 
 type TButtonSize = 'small' | 'medium' | 'large'
 
