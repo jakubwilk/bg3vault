@@ -1,4 +1,4 @@
-import { Button, Checkbox, PasswordInput, TextInput } from 'common/components'
+import { Button, Checkbox, PasswordInput, Select, TextInput } from 'common/components'
 
 export default function Home() {
   return (
@@ -8,6 +8,14 @@ export default function Home() {
         <TextInput label={'Text'} description={'Text description'} />
         <PasswordInput label={'Password'} description={'Password description'} />
         <Checkbox label={'Checkbox'} description={'Checkbox description'} />
+        <Select
+          label={'Select'}
+          description={'Select description'}
+          data={[
+            { label: 'Option 1', value: 'Value 1' },
+            { label: 'Option 2', value: 'Value 2' },
+          ]}
+        />
       </div>
     </div>
   )
