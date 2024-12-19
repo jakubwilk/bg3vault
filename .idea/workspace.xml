@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Use Checkbox component in page.tsx">
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/select/Select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/select/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/select/styles.module.css" afterDir="false" />
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Add radius props to omit type in each custom components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +134,7 @@
       <workItem from="1734595979235" duration="465000" />
       <workItem from="1734596455530" duration="1444000" />
       <workItem from="1734597923137" duration="1666000" />
-      <workItem from="1734620671817" duration="7709000" />
+      <workItem from="1734620671817" duration="9620000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -278,7 +272,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734628537099</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Create custom Select component">
+      <option name="closed" value="true" />
+      <created>1734632334320</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734632334320</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Use Select component in page.tsx">
+      <option name="closed" value="true" />
+      <created>1734632342213</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734632342213</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add radius props to omit type in each custom components">
+      <option name="closed" value="true" />
+      <created>1734632395587</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1734632395587</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +328,9 @@
     <MESSAGE value="Update imports and display new component in page.tsx" />
     <MESSAGE value="Add custom Checkbox component" />
     <MESSAGE value="Use Checkbox component in page.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use Checkbox component in page.tsx" />
+    <MESSAGE value="Create custom Select component" />
+    <MESSAGE value="Use Select component in page.tsx" />
+    <MESSAGE value="Add radius props to omit type in each custom components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add radius props to omit type in each custom components" />
   </component>
 </project>
