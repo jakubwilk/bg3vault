@@ -1,10 +1,13 @@
-import { Button, TextInput } from 'common/components'
+import { Button, PasswordInput, TextInput } from 'common/components'
 
 export default function Home() {
   return (
-    <div className={'flex h-screen items-center flex-col justify-center gap-2'}>
-      <Button>{'abba'}</Button>
-      <TextInput label={'Label'} description={'Description'} />
+    <div className={'flex h-screen items-center justify-center'}>
+      <div className={'w-full max-w-[500px] flex flex-col justify-center gap-2'}>
+        <Button>{'abba'}</Button>
+        <TextInput label={'Text'} description={'Text description'} />
+        <PasswordInput label={'Password'} description={'Password description'} />
+      </div>
     </div>
   )
 }
