@@ -35,7 +35,7 @@ export default function TextInput({ size = 'medium', classNames = {}, ...rest }:
     const defaultClasses = {
       wrapper: clsx(wrapper ?? ''),
       section: clsx(section ?? ''),
-      root: clsx(root ?? ''),
+      root: clsx(classes.root, root ?? ''),
       required: clsx(required ?? ''),
       error: clsx(error ?? ''),
     }
