@@ -1,5 +1,6 @@
 .root {
   color: var(--mantine-color-black);
+  font-weight: 600;
 
   &:active {
     background-color: var(--mantine-color-main-8);
