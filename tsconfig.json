@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "config": ["./src/config/index.ts"],
       "auth/*": ["./src/modules/auth/*"],
       "common/*": ["./src/modules/common/*"]
     }

@@ -1,6 +1,9 @@
 /** @type {import('postcss-load-config').Config} */
 const config = {
   plugins: {
+    'postcss-url': {
+      url: 'rebase',
+    },
     tailwindcss: {},
     'postcss-preset-mantine': {},
     'postcss-simple-vars': {
