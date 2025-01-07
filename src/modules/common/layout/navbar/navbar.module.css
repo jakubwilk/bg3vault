@@ -1,0 +1,18 @@
+.subLabel {
+    color: var(--mantine-color-dark-2) !important;
+}
+
+.link {
+    &:hover,
+    &:focus-visible {
+        color: var(--mantine-color-main-4);
+
+        & > div > p {
+            color: var(--mantine-color-gray-2) !important;
+        }
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+}
