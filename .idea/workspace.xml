@@ -4,31 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Update workspace.xml">
-      <change afterPath="$PROJECT_DIR$/public/assets/main_header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/header/header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/header/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/navbar/DesktopNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/navbar/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/navbar/navbar.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/models/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/models/navbar.model.ts" afterDir="false" />
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Create header component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/button/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/button/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/Checkbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/checkbox/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ui-controls" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,7 +89,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ui-header&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/react/bg3vault/src/modules/common/components/passwordInput&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -179,6 +156,8 @@
       <workItem from="1734951929605" duration="1183000" />
       <workItem from="1735551929749" duration="6729000" />
       <workItem from="1736022196257" duration="26000" />
+      <workItem from="1736287728521" duration="194000" />
+      <workItem from="1736709516395" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -348,7 +327,55 @@
       <option name="project" value="LOCAL" />
       <updated>1734646945327</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Install icons and edit configs">
+      <option name="closed" value="true" />
+      <created>1736287838650</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1736287838650</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Update global.css">
+      <option name="closed" value="true" />
+      <created>1736287854982</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1736287854982</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add image">
+      <option name="closed" value="true" />
+      <created>1736287861786</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1736287861786</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Update next.config.ts">
+      <option name="closed" value="true" />
+      <created>1736287870536</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1736287870536</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Update styles for input controls">
+      <option name="closed" value="true" />
+      <created>1736287900627</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1736287900627</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Create header component">
+      <option name="closed" value="true" />
+      <created>1736287909928</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1736287909928</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,6 +411,12 @@
     <MESSAGE value="Use Select component in page.tsx" />
     <MESSAGE value="Add radius props to omit type in each custom components" />
     <MESSAGE value="Update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
+    <MESSAGE value="Install icons and edit configs" />
+    <MESSAGE value="Update global.css" />
+    <MESSAGE value="Add image" />
+    <MESSAGE value="Update next.config.ts" />
+    <MESSAGE value="Update styles for input controls" />
+    <MESSAGE value="Create header component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create header component" />
   </component>
 </project>
