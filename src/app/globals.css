@@ -9,10 +9,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--mantine-color-gray-3);
 }
 
 input,
 button,
 textarea {
   transform: translateY(0) !important;
+}
+
+.content {
+  background-color: var(--mantine-color-dark-7);
 }

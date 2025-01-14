@@ -37,7 +37,7 @@ const APP_MENU: IMenu[] = [
   },
 ]
 
-export default function DesktopNavbar() {
+export default function Navbar() {
   const renderMenu = (): ReactNode => {
     return APP_MENU.map(({ id, label, subLabel, href, icon }) => (
       <Link key={id} className={clsx('flex items-center gap-2', classes.link)} href={href}>
@@ -59,5 +59,5 @@ export default function DesktopNavbar() {
     ))
   }
 
-  return <nav className={'flex items-start gap-8 px-4'}>{renderMenu()}</nav>
+  return <nav className={clsx('flex items-start gap-8 p-4', classes.navbar)}>{renderMenu()}</nav>
 }

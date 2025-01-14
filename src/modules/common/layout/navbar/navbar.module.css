@@ -1,3 +1,7 @@
+.navbar {
+    background-color: var(--mantine-color-dark-7);
+}
+
 .subLabel {
     color: var(--mantine-color-dark-2) !important;
 }

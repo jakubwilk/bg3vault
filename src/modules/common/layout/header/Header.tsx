@@ -2,7 +2,7 @@
 
 import { useMediaQuery } from '@mantine/hooks'
 import { clsx } from 'clsx'
-import { DesktopNavbar } from 'common/layout'
+import { Navbar } from 'common/layout'
 
 import classes from './header.module.css'
 
@@ -13,7 +13,7 @@ export default function Header() {
     <header className={clsx(classes.header, matches ? 'min-h-36' : 'min-h-72')}>
       <div className={'container mx-auto px-4 min-h-[inherit] flex flex-col justify-end'}>
         <div className={'flex justify-between gap-4'}>{'...'}</div>
-        {!matches && <DesktopNavbar />}
+        {!matches && <Navbar />}
       </div>
     </header>
   )
