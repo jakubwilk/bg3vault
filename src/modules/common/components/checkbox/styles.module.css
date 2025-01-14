@@ -5,3 +5,7 @@
 .icon {
     color: var(--mantine-color-black);
 }
+
+.description {
+    font-size: 0.8rem;
+}

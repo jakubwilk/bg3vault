@@ -34,7 +34,7 @@ export default function Checkbox({ classNames = {}, ...rest }: ICheckboxProps) {
       body: clsx(body ?? ''),
       labelWrapper: clsx(labelWrapper ?? ''),
       label: clsx(label ?? ''),
-      description: clsx(description ?? ''),
+      description: clsx(classes.description, description ?? ''),
       error: clsx(error ?? ''),
     }
   }, [classNames])

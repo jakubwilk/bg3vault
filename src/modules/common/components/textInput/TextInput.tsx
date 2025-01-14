@@ -38,13 +38,13 @@ export default function TextInput({ size = 'medium', classNames = {}, ...rest }:
       root: clsx(classes.root, root ?? ''),
       required: clsx(required ?? ''),
       error: clsx(error ?? ''),
+      description: clsx(classes.description, description ?? ''),
     }
 
     if (size === 'large') {
       return {
         input: clsx(classes.input, classes.inputLarge, input ?? ''),
         label: clsx(classes.label, classes.labelLarge, label ?? ''),
-        description: clsx(classes.descriptionLarge, description ?? ''),
         ...defaultClasses,
       }
     }
@@ -52,7 +52,6 @@ export default function TextInput({ size = 'medium', classNames = {}, ...rest }:
     return {
       input: clsx(classes.input, classes.inputMedium, input ?? ''),
       label: clsx(classes.label, label ?? ''),
-      description: clsx(description ?? ''),
       ...defaultClasses,
     }
   }, [size, classNames])
