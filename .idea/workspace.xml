@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Create header component">
+    <list default="true" id="b136072d-1b98-4d4d-8383-9de624da6549" name="Changes" comment="Add nav background and pack page content in container">
+      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/wrapper/Content.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/wrapper/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/common/layout/wrapper/wrapper.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/layout/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/layout/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -158,6 +164,8 @@
       <workItem from="1736022196257" duration="26000" />
       <workItem from="1736287728521" duration="194000" />
       <workItem from="1736709516395" duration="2000" />
+      <workItem from="1736878213991" duration="54000" />
+      <workItem from="1736889814684" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="Add WebStorm files">
       <option name="closed" value="true" />
@@ -375,7 +383,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736287909928</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1736878236292</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1736878236292</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Update description class in control components">
+      <option name="closed" value="true" />
+      <created>1736890353238</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1736890353238</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add nav background and pack page content in container">
+      <option name="closed" value="true" />
+      <created>1736891258114</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1736891258114</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add WebStorm files" />
     <MESSAGE value="Replace number id with string uuid for races" />
     <MESSAGE value="Update races.json with subraces variants" />
     <MESSAGE value="Update human and half-orc race" />
@@ -410,13 +441,15 @@
     <MESSAGE value="Create custom Select component" />
     <MESSAGE value="Use Select component in page.tsx" />
     <MESSAGE value="Add radius props to omit type in each custom components" />
-    <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Install icons and edit configs" />
     <MESSAGE value="Update global.css" />
     <MESSAGE value="Add image" />
     <MESSAGE value="Update next.config.ts" />
     <MESSAGE value="Update styles for input controls" />
     <MESSAGE value="Create header component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create header component" />
+    <MESSAGE value="Update workspace.xml" />
+    <MESSAGE value="Update description class in control components" />
+    <MESSAGE value="Add nav background and pack page content in container" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add nav background and pack page content in container" />
   </component>
 </project>
