@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Button, Checkbox, PasswordInput, Select, TextInput } from 'common/components'
+import { Content } from 'common/layout'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className={'container mx-auto px-4'}>
-      <div className={'flex h-screen items-center justify-center content'}>
+    <Content>
+      <div className={'flex h-screen items-center justify-center'}>
         <div className={'w-full max-w-[500px] flex flex-col justify-center gap-2'}>
           <Button>{'abba'}</Button>
           <TextInput label={'Text'} description={'Text description'} />
@@ -25,6 +26,6 @@ export default function Home() {
           />
         </div>
       </div>
-    </div>
+    </Content>
   )
 }
