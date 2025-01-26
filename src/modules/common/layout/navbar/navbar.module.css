@@ -11,7 +11,8 @@
     &:focus-visible {
         color: var(--mantine-color-main-4);
 
-        & > div > p {
+        & > div > p,
+        & > p {
             color: var(--mantine-color-gray-2) !important;
         }
     }
@@ -24,7 +25,13 @@
 .linkCurrent {
     color: var(--mantine-color-main-4);
 
-    & > div > p {
+    & > div > p,
+    & > p {
         color: var(--mantine-color-gray-2) !important;
     }
+}
+
+.label {
+    font-size: 0.8rem !important;
+    color: var(--mantine-color-gray-6) !important;
 }

@@ -1,9 +1,9 @@
-import { ReactNode } from 'react'
+import { MenuIconComponentEnum } from 'common/utils'
 
 export interface IMenu {
   id: number
   label: string
   subLabel?: string
   href: string
-  icon?: ReactNode
+  icon?: MenuIconComponentEnum
 }
