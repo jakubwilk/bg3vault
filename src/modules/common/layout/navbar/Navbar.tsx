@@ -2,7 +2,9 @@
 
 import { Fragment, ReactNode } from 'react'
 import Link from 'next/link'
-import { Text } from '@mantine/core'
+import { usePathname } from 'next/navigation'
+import { Text, Tooltip } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconBook, IconHelpCircle, IconHome, IconNews } from '@tabler/icons-react'
 import { clsx } from 'clsx'
 import { IMenu } from 'common/models'
@@ -20,35 +22,45 @@ const APP_MENU: IMenu[] = [
     id: 2,
     label: 'BG3 Non-Origin Builds',
     subLabel: 'Custom Tav',
-    href: '/',
+    href: '/builds-tav',
     icon: <IconHelpCircle stroke={1.5} size={18} />,
   },
   {
     id: 3,
     label: 'BG3 Guides',
-    href: '/',
+    href: '/guides',
     icon: <IconBook stroke={1.5} size={18} />,
   },
   {
     id: 4,
     label: 'News and information',
-    href: '/',
+    href: '/news',
     icon: <IconNews stroke={1.5} size={18} />,
   },
 ]
 
 export default function Navbar() {
+  const matches = useMediaQuery('(max-width: 62em)')
+  const pathname = usePathname()
+
   const renderMenu = (): ReactNode => {
     return APP_MENU.map(({ id, label, subLabel, href, icon }) => (
-      <Link key={id} className={clsx('flex items-center gap-2', classes.link)} href={href}>
+      <Link
+        key={id}
+        className={clsx(
+          'flex items-center gap-2',
+          href === pathname ? classes.linkCurrent : '',
+          classes.link,
+        )}
+        href={href}
+      >
         {subLabel ? (
-          <div>
+          <Tooltip label={subLabel} color={'gray'} position={'bottom'}>
             <div className={'flex items-center gap-2'}>
               {icon}
               <Text className={'font-medium'}>{label}</Text>
             </div>
-            <Text className={clsx('text-sm text-right', classes.subLabel)}>{subLabel}</Text>
-          </div>
+          </Tooltip>
         ) : (
           <Fragment>
             {icon}
@@ -59,5 +71,13 @@ export default function Navbar() {
     ))
   }
 
-  return <nav className={clsx('flex items-start gap-8 p-4', classes.navbar)}>{renderMenu()}</nav>
+  return (
+    <div className={clsx('sticky top-0', matches ? '' : classes.navbarDesktop)}>
+      <div className={'container mx-auto px-4'}>
+        <nav className={clsx('flex items-center gap-8 px-4 h-16', classes.navbar)}>
+          {renderMenu()}
+        </nav>
+      </div>
+    </div>
+  )
 }
