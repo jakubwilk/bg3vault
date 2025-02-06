@@ -1,7 +1,6 @@
 import { Barlow } from 'next/font/google'
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core'
-import { Header } from 'common/layout'
-import MobileFixedNavbar from 'common/layout/navbar/MobileFixedNavbar'
+import { Header, MobileFixedNavbar } from 'common/layout'
 import { theme } from 'config'
 
 import '@mantine/core/styles.css'

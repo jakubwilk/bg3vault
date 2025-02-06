@@ -1,11 +1,12 @@
 'use client'
 
+import { Fragment } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Text } from '@mantine/core'
+import { Divider, Menu, Text } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { clsx } from 'clsx'
-import { MenuIconComponentEnum, renderMenuIconComponent } from 'common/utils'
+import { APP_DESKTOP_MENU, MenuIconComponentEnum, renderMenuIconComponent } from 'common/utils'
 
 import classes from './navbar.module.css'
 
@@ -31,6 +32,44 @@ export default function MobileFixedNavbar() {
                 {'Home'}
               </Text>
             </Link>
+          </div>
+          <div className={'flex justify-center items-center'}>
+            <Menu width={'90vw'} withinPortal={false}>
+              <Menu.Target>
+                <Link
+                  className={clsx('flex items-center flex-col', classes.link)}
+                  href={'#'}
+                  onClick={(e) => e.preventDefault()}
+                >
+                  {renderMenuIconComponent(MenuIconComponentEnum.MENU, 28)}
+                  <Text fw={500} className={clsx('uppercase', classes.label)}>
+                    {'Menu'}
+                  </Text>
+                </Link>
+              </Menu.Target>
+              <Menu.Dropdown className={'p-4'}>
+                {APP_DESKTOP_MENU.slice(1, APP_DESKTOP_MENU.length).map(
+                  ({ id, label, subLabel, href }) => (
+                    <Fragment key={id}>
+                      <Link
+                        href={href}
+                        className={clsx(
+                          'flex flex-col',
+                          href === pathname ? classes.linkCurrentMobile : '',
+                          classes.link,
+                        )}
+                      >
+                        <Text>{label}</Text>
+                        {subLabel && (
+                          <Text className={'opacity-75 uppercase text-xs'}>{subLabel}</Text>
+                        )}
+                      </Link>
+                      {id !== APP_DESKTOP_MENU.length && <Divider my={'xs'} />}
+                    </Fragment>
+                  ),
+                )}
+              </Menu.Dropdown>
+            </Menu>
           </div>
         </div>
       </div>
