@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Content>
-      <div className={'flex h-screen items-center justify-center'}>
+      <div className={'flex mb-20 h-screen items-center justify-center md:mb-0'}>
         <div className={'w-full max-w-[500px] flex flex-col justify-center gap-2'}>
           <Button>{'abba'}</Button>
           <TextInput label={'Text'} description={'Text description'} />
