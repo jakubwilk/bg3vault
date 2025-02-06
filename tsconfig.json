@@ -21,7 +21,8 @@
     "paths": {
       "config": ["./src/config/index.ts"],
       "auth/*": ["./src/modules/auth/*"],
-      "common/*": ["./src/modules/common/*"]
+      "common/*": ["./src/modules/common/*"],
+      "lang/*": ["./src/modules/lang/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
