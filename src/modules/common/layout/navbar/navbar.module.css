@@ -31,6 +31,19 @@
   }
 }
 
+.linkMobileActive {
+  color: var(--mantine-color-main-4);
+
+  & > div > p,
+  & > p {
+    color: var(--mantine-color-gray-2) !important;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
 .linkCurrentMobile {
   & > p {
     color: var(--mantine-color-main-4) !important;

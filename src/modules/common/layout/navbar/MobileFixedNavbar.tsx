@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Divider, Menu, Text } from '@mantine/core'
@@ -13,6 +13,7 @@ import classes from './navbar.module.css'
 export default function MobileFixedNavbar() {
   const matches = useMediaQuery('(max-width: 62em)')
   const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     matches && (
@@ -34,10 +35,13 @@ export default function MobileFixedNavbar() {
             </Link>
           </div>
           <div className={'flex justify-center items-center'}>
-            <Menu width={'90vw'} withinPortal={false}>
+            <Menu width={'90vw'} withinPortal={false} opened={isMenuOpen} onChange={setIsMenuOpen}>
               <Menu.Target>
                 <Link
-                  className={clsx('flex items-center flex-col', classes.link)}
+                  className={clsx(
+                    'flex items-center flex-col',
+                    isMenuOpen ? classes.linkMobileActive : '',
+                  )}
                   href={'#'}
                   onClick={(e) => e.preventDefault()}
                 >
