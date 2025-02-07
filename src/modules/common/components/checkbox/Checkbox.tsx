@@ -29,12 +29,12 @@ export default function Checkbox({ classNames = {}, ...rest }: ICheckboxProps) {
     return {
       root: clsx(root ?? ''),
       input: clsx(classes.input, input ?? ''),
-      icon: clsx(icon ?? ''),
+      icon: clsx(classes.icon, icon ?? ''),
       inner: clsx(inner ?? ''),
       body: clsx(body ?? ''),
       labelWrapper: clsx(labelWrapper ?? ''),
       label: clsx(label ?? ''),
-      description: clsx(description ?? ''),
+      description: clsx(classes.description, description ?? ''),
       error: clsx(error ?? ''),
     }
   }, [classNames])

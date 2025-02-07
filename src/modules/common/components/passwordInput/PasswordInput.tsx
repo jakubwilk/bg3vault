@@ -36,6 +36,7 @@ export default function PasswordInput({ classNames = {}, ...rest }: ITextInputPr
       wrapper: clsx(wrapper ?? ''),
       section: clsx(section ?? ''),
       root: clsx(classes.root, root ?? ''),
+      description: clsx(classes.description, description ?? ''),
       required: clsx(required ?? ''),
       error: clsx(error ?? ''),
     }
@@ -43,7 +44,6 @@ export default function PasswordInput({ classNames = {}, ...rest }: ITextInputPr
     return {
       input: clsx(classes.input, classes.inputMedium, input ?? ''),
       label: clsx(classes.label, label ?? ''),
-      description: clsx(description ?? ''),
       ...defaultClasses,
     }
   }, [classNames])

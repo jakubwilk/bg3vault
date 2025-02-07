@@ -53,7 +53,7 @@ export default function Select({ classNames = {}, ...rest }: ISelectProps) {
       root: clsx(classes.root, root ?? ''),
       label: clsx(classes.label, label ?? ''),
       required: clsx(required ?? ''),
-      description: clsx(description ?? ''),
+      description: clsx(classes.description, description ?? ''),
       error: clsx(error ?? ''),
       dropdown: clsx(classes.dropdown, dropdown ?? ''),
       options: clsx(options ?? ''),
