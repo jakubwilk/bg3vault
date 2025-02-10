@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from '@mantine/hooks'
 import { clsx } from 'clsx'
+import { UserMenuDesktopWrapper } from 'users/components'
 
 import classes from './header.module.css'
 
@@ -21,7 +22,7 @@ export default function Header() {
           }
         >
           <div>{'logo'}</div>
-          {!matches && <div>{'user'}</div>}
+          {!matches && <UserMenuDesktopWrapper />}
         </div>
       </div>
     </header>
