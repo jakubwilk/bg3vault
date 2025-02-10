@@ -1,11 +1,16 @@
 .input {
-    border-width: 2px;
+  border-width: 2px;
+  cursor: pointer;
 }
 
 .icon {
-    color: var(--mantine-color-black);
+  color: var(--mantine-color-black);
+}
+
+.label {
+  cursor: pointer;
 }
 
 .description {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
