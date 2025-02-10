@@ -22,7 +22,8 @@
       "config": ["./src/config/index.ts"],
       "auth/*": ["./src/modules/auth/*"],
       "common/*": ["./src/modules/common/*"],
-      "lang/*": ["./src/modules/lang/*"]
+      "lang/*": ["./src/modules/lang/*"],
+      "users/*": ["./src/modules/users/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
